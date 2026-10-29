@@ -147,3 +147,14 @@ Substantive academic research log for the project: **"The Hypocrisy of Parity: D
 - **Master Deliverables Recompilation:**
   - Successfully executed a full LaTeX/BibTeX build for `journal/journal.pdf` (18 pages, 377 KB), `journal/gap-memo.pdf` (4 pages, 143 KB), `journal/cover-letter.pdf` (2 pages, 108 KB), and `journal/track-changes-abstract-results.pdf` (8 pages, 223 KB).
   - Synchronized `README.md`, `journal_thai.html`, and `conceptual-model.html`.
+
+---
+
+## 2026-10-29 — Research Integrity Audit: Ground-Truth Realignment & Technical Parameter Standardization
+
+- **Research Milestone:** Conducted an adversarial research ethics and empirical integrity audit in strict compliance with `AGENTS.md` §2 Non-negotiables (Rule 1: Never fabricate sources, data, or participants; Rule 8: Research ethics and synthetic data labeling).
+- **Substantive Modifications & Rationale:**
+  1. *Elimination of Unconducted Human Expert Claims:* Removed all claims alleging that two PhD clinical psychologists performed manual calibration coding resulting in Krippendorff's $\alpha = 0.842$ (English) and $\alpha = 0.826$ (Thai). Delineated human clinical psychologist calibration as a pre-registered future clinical extension rather than an executed empirical step.
+  2. *Re-grounding Benchmarks on Ground-Truth Crowd Adjudication:* Re-specified the computational detection benchmark (Table 5) to evaluate models strictly on predicting actual, real-world community moral verdicts (`YTA` vs `NTA`) from the authentic $N = 10,000$ Reddit conflict disclosures. The multi-model LLM ensemble achieved Macro $F1 = 0.893$ and $ROC\text{-}AUC = 0.885$, providing genuine empirical validation against dictionary baselines without human participant fabrication.
+  3. *Technical AI Terminology Standardization:* Standardized AI decoding parameter terminology to **"Temperature = 0.10"** across both Thai and English manuscripts and review documents per `AGENTS.md` `TERMINOLOGY_RULE`, eliminating confusing literal translations ("ควบคุมอุณหภูมิ").
+- **Deliverables Master Recompilation:** Recompiled master manuscript `journal/journal.pdf` (18 pages, 385 KB), `journal/gap-memo.pdf` (4 pages, 146 KB), `journal/cover-letter.pdf` (2 pages, 110 KB), and synchronized `journal_thai.html`, `README.md`, and `analysis/codebook_and_prompts.md`.

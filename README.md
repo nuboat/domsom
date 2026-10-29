@@ -19,7 +19,7 @@ CORE_PARADOX_FRAME: "How 'Weaponized Egalitarian Posturing' (WEP) paired with Le
 STUDY_DESIGN: "Two-Study Cross-Cultural Design: Study 1 (Reddit AITA English, N = 10,000) + Study 2 (Pantip Thai, N = 4,250), Total N = 14,250"
 DATA_SOURCE_ROLE: "First-person moral judgment seeking narratives on public dispute forums (r/AmItheAsshole and Pantip) function as an unobtrusive observational window into authentic interpersonal accounts, bypassing self-report social desirability bias"
 SPLIT_SOURCE_VALIDATION: "Split-Source & Crowd-Consensus Validation: Narrator's internal discursive constructs (WEP, LRA, SSA) extracted from text; behavioral exploitation outcome (EIR) triangulated with crowd-sourced moral verdicts (YTA/NTA, community accountability votes)"
-BILINGUAL_VALIDATION: "Human-Validated Bilingual LLM Annotation (Krippendorff's alpha >= 0.82 across 1,000 calibration cases)"
+BILINGUAL_VALIDATION: "Standardized Bilingual LLM Annotation Protocol (decoding Temperature = 0.10, triangulated with crowd-sourced moral verdicts)"
 TARGET_JOURNALS:
   # Primary Group 1: International Computational Social Science & Communication (Q1)
   - "Computers in Human Behavior (Elsevier, Q1, SJR ~2.4, Editor: Prof. Matthieu Guitton) [PRIMARY FIT]"
