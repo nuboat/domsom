@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\hypersetup{colorlinks=true, linkcolor=blue!70!black, urlcolor=blue!70!black}
+
+\title{\textbf{\Large Institutional Review Board (IRB) Ethics Package \& Exemption Protocol}\\[1ex]
+\large Human Research Ethics and AI Cultural Informant Compliance}
+\author{\textbf{Principal Investigator \& Center for Computational Social Science}}
+\date{October 29, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Project Metadata \& Classification}
+\begin{itemize}
+    \item \textbf{Protocol Title:} The Hypocrisy of Parity: Synthesizing AI Perspectives and Big Data to Map Weaponized Social Justice
+    \item \textbf{Principal Investigator (PI):} Research Team, Center for Computational Social Science
+    \item \textbf{Review Category Requested:} \textbf{Exempt Review} under 45 CFR 46.104(d)(4) (Secondary research uses of publicly available, non-interventional digital records).
+    \item \textbf{Targeted Funding / Data Window:} January 2022 -- September 2026.
+\end{itemize}
+
+\section{Protocol Summary \& Ethical Framework}
+This study investigates the latent sociolinguistic and behavioral dynamics between public egalitarian virtue signaling and private extractive micro-actions. The investigation relies exclusively on observational text corpora scraped from public online discussion repositories (Reddit public threads) and transaction dispute threads. No interventional experiments, deceptive interactions, or direct participant recruitment are conducted with human subjects.
+
+\section{Data Governance, Privacy, and De-Identification Protocol}
+In full compliance with the Association of Internet Researchers (AoIR) Ethics Guidelines 3.0 and national data protection laws (PDPA / GDPR):
+\begin{enumerate}
+    \item \textbf{Zero Re-Identifiability:} All user account handles, author usernames, timestamps with microsecond precision, and location references are irreversibly stripped at the ingestion pipeline. User identifiers are transformed into salted SHA-256 cryptographic hashes.
+    \item \textbf{Quotation Paraphrasing Standard:} In academic manuscript drafts, direct user quotes that could allow reverse-search indexing via commercial search engines are structurally paraphrased or synthesized into composite vignettes, preventing re-identification of original authors.
+    \item \textbf{Secure Storage \& Access Control:} Raw corpus files are stored in an encrypted disk volume (`analysis/`) with access restricted strictly to certified project researchers. No raw or identifiable text data is tracked under public version control.
+\end{enumerate}
+
+\section{Ethics of Large Language Models as Cultural Informants}
+The deployment of Large Language Models (LLMs) as sociological cultural informants adheres to emerging computational social science standards:
+\begin{itemize}
+    \item \textbf{Synthetic Informants, Not Human Proxies:} LLMs are prompted strictly as analytical and cultural informants reflecting synthesized social priors, rather than being passed off as human study participants.
+    \item \textbf{Algorithmic Bias Safeguards:} Prompts are neutral, standardized, and audited across three independent model providers (OpenAI, Anthropic, Google) to ensure conclusions do not reflect a single proprietary corporate alignment filter.
+    \item \textbf{Transparency \& Disclosure:} All prompts, model versions (checkpoints), and temperature settings are recorded in \texttt{irb/AI\_USE\_LOG.md} in accordance with ICMJE and COPE authorship ethics.
+\end{itemize}
+
+\section{Risk Assessment and Investigator Assurances}
+\begin{itemize}
+    \item \textbf{Potential Risk to Subjects:} Minimal risk. The probability and magnitude of harm or discomfort anticipated in the research are not greater in and of themselves than those ordinarily encountered in daily life or during routine internet participation.
+    \item \textbf{Investigator Assurance:} The investigators certify that the study will be conducted in strict compliance with ethical guidelines and will promptly notify the IRB of any protocol modifications or unanticipated ethical dilemmas.
+\end{itemize}
+
+\vspace{3ex}
+\noindent \textbf{Signatures:}\\[3ex]
+\begin{tabular}{p{7cm}p{7cm}}
+\rule{6cm}{0.4pt} & \rule{6cm}{0.4pt}\\
+Principal Investigator & Human Research Ethics Committee Chair\\
+Date: October 29, 2026 & Date: October 29, 2026
+\end{tabular}
+
+\end{document}

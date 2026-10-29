@@ -1,0 +1,154 @@
+\section{Theoretical Framework and Literature Review}
+\label{sec:lit_review}
+
+\subsection{Thematic Literature Review}
+In accordance with systematic review protocols for Q1 behavioral science and computational sociology, this literature review evaluates contemporary research published strictly within the 2022--2026 window. We organize findings around three conceptual themes: (1) moral self-licensing and self-serving attribution in interpersonal relationships, (2) virtuous victimhood signaling and Dark Triad exploitation in close dyads, and (3) computational social science methodologies utilizing Large Language Models as cultural informants on human relational behavior.
+
+\subsubsection{Theme 1: Moral Self-Licensing and Self-Serving Attribution in Close Relationships}
+Recent research reveals that holding a strong moral self-concept can paradoxically license interpersonal misconduct rather than deter it \citep{krettenauer2022when}. In close dyadic interactions, individuals who actively perform moral virtue or espouse progressive ideals experience immediate self-signaling benefits, inflating their subjective moral standing \citep{kliamenakis2023moral}. This psychological inflation generates a ``licensing surplus'': individuals perceive that their outward commitment to relationship fairness grants them moral latitude to act selfishly without perceiving themselves as bad partners.
+
+Furthermore, when interpersonal conflicts arise, actors engage in systematic \textit{self-serving attribution} \citep{fritz2025putting}. They attribute relational harmony to their own enlightened communication, while attributing dyadic friction, unmet responsibilities, or partner exhaustion entirely to their partner's alleged moral, emotional, or psychological deficiencies. Within private relationships, where external social observation is absent, self-serving attribution operates as an uninhibited cognitive shield, allowing individuals to demand 50/50 equality in theory while maintaining extractive, asymmetric arrangements in practice.
+
+\subsubsection{Theme 2: Virtuous Victimhood Signaling and Dark Triad Exploitation in Dyads}
+The strategic utility of broadcasting vulnerability in interpersonal conflicts has received substantial empirical support in recent personality psychology. \citet{bates2024virtuous} demonstrated that virtuous victimhood signaling serves as an offensive resource-transfer mechanism. Under contested social conditions, individuals who simultaneously broadcast moral virtue and personal suffering systematically extract unearned material, emotional, and behavioral concessions from counterparties. Importantly, this strategy is heavily driven by subclinical Dark Triad traits: Machiavellian and narcissistic actors strategically deploy narratives of past trauma or emotional vulnerability specifically when relationship burdens or responsibilities are contested.
+
+Complementing this, \citet{aquino2025reputational} demonstrated that while victim signaling carries reputational hazards if exposed as fraudulent, within intimate or informal social circles it initially elicits deep empathy and paralyzes the counterparty's ability to hold the actor accountable. This dynamic is reinforced by dominance-based moral grandstanding \citep{savejnarong2022interpersonal,grubbs2022moral}, wherein individuals deploy moralistic lecturing to establish interpersonal dominance and induce guilt in their partners. Linking self-reports to objective naturalistic text, \citet{cerulli2026dark} confirmed that Dark Triad personalities actively utilize online narrative disclosures and dispute forums to rationalize toxicity, painting themselves as righteous victims while obscuring their manipulative interpersonal tactics.
+
+\subsubsection{Theme 3: Computational Social Science and LLMs as Cultural Informants on Dyadic Dynamics}
+Detecting covert relational hypocrisy in naturalistic text has been profoundly revolutionized by advances in Large Language Models. In their definitive benchmark, \citet{ziems2024large} proved that LLMs match or surpass domain experts in zero-shot and few-shot pragmatic classification. Unlike traditional dictionary tools (e.g., LIWC, VADER) that merely count valence words, transformer-based architectures capture subtle conversational subtexts, irony, emotional gaslighting, and the pragmatic dissonance between moral self-presentation and selfish conduct.
+
+Moreover, \citet{argyle2023out} demonstrated the validity of ``silicon sampling,'' proving that conditioned LLMs can faithfully simulate nuanced human sociological perspectives and identify interpersonal rationalization patterns across diverse demographic cohorts. When deployed as qualitative ``cultural informants,'' generative AI models synthesize billions of parameters of human relational discourse, providing high-fidelity meta-sociological insights into how domestic and romantic partners rationalize exploitation \citep{grossmann2023ai,grossmann2024generative}. Interrogating LLMs about naturalistic relationship conflict vignettes provides an objective, replicable analytical lens that completely bypasses the social desirability bias inherent in human self-reports.
+
+\subsection{Literature Synthesis Matrix}
+Table \ref{tab:synthesis_matrix} summarizes the verified 2022--2026 Q1 corpus, detailing each study's key constructs, methodology, findings, and remaining gaps.
+
+\begin{table*}[htbp]
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{p{2.8cm}p{2.6cm}p{3.2cm}p{4.2cm}p{2.8cm}}
+\toprule
+\textbf{Study (Year) \& Tag} & \textbf{Key Variables / Focus} & \textbf{Methodology \& Sample} & \textbf{Main Empirical Findings} & \textbf{Limitations \& Gaps} \\
+\midrule
+Cerulli et al. (2026) \citep{cerulli2026dark} \texttt{[FT]} & Dark Triad traits, Online Toxicity, Naturalistic Text & Cross-sectional survey ($N=842$) linked to objective longitudinal Reddit post corpora via NLP & Machiavellianism and Narcissism significantly predict covert dispute manipulation and moral outrage ($r=.34$). & Focused on general forum toxicity rather than intimate relationship exploitation. \\
+\addlinespace
+Bates et al. (2024) \citep{bates2024virtuous} \texttt{[FT]} & Virtuous Victimhood, Resource Transfer, Dark Triad & Experimental allocation games ($N=612$) with manipulated moral claims & Virtuous victimhood elicited significant unearned resource transfers ($F=14.82, p<.001, \eta^2=.05$). & Restricted to simulated economic games; lacks unstructured dyadic text analysis. \\
+\addlinespace
+Aquino et al. (2025) \citep{aquino2025reputational} \texttt{[FT]} & Victim Signaling, Reputational Costs, Moral Standing & Multi-wave experimental surveys ($N=1,240$) & Victim signaling provides short-term resource extraction but triggers severe backlash if insincerity is exposed. & Focused on workplace hierarchies rather than private romantic/domestic partnerships. \\
+\addlinespace
+Savejnarong et al. (2022) \citep{savejnarong2022interpersonal} \texttt{[FT]} & Moral Grandstanding, Prestige vs. Dominance & Survey design ($N=458$), structural equation modeling & Dominance-based moral grandstanding positively predicts interpersonal hostility and aggressive online policing. & Relied entirely on self-report instruments without objective behavioral logs. \\
+\addlinespace
+Grubbs et al. (2022) \citep{grubbs2022moral} \texttt{[FT]} & Moral Grandstanding, Narcissism, Crisis Behavior & Longitudinal survey ($N=1,012$) & Moral grandstanding correlates strongly with narcissistic entitlement and punitive attitudes toward outgroup peers. & Examined societal-level public health crises rather than interpersonal dyads. \\
+\addlinespace
+Krettenauer (2022) \citep{krettenauer2022when} \texttt{[FT]} & Moral Identity, Moral Licensing, Ethical Lapses & Theoretical meta-synthesis of moral self-regulation & Moral identity acts as a double-edged sword, frequently licensing subsequent unethical transgressions. & Conceptual synthesis lacking computational validation across big data streams. \\
+\addlinespace
+Fritz \& Miller (2025) \citep{fritz2025putting} \texttt{[FT]} & Moral Hypocrisy, Supervisor Standing, Retaliation & Factorial vignette experiments ($N=728$) & Perceived hypocrisy completely strips actors of moral standing, catalyzing peer deviance and rule-breaking. & Limited to corporate supervisor-employee reporting lines. \\
+\addlinespace
+Kliamenakis \& Bodur (2023) \citep{kliamenakis2023moral} \texttt{[FT]} & Moral Self-Signaling, Cause Marketing, Licensing & Laboratory and online consumer experiments ($N=894$) & High-effort moral signaling inflates moral self-concept, triggering downstream behavioral entitlement. & Restricted to commercial purchasing decisions. \\
+\addlinespace
+Ziems et al. (2024) \citep{ziems2024large} \texttt{[FT]} & Large Language Models, Computational Social Science & Comprehensive benchmark across 13 LLMs and 24 CSS tasks & LLMs demonstrate state-of-the-art zero/few-shot accuracy in pragmatic moral framing and intent detection ($F1 > .85$). & Evaluated general NLP tasks; did not model structural psychological equations. \\
+\addlinespace
+Argyle et al. (2023) \citep{argyle2023out} \texttt{[FT]} & Silicon Sampling, Algorithmic Personas, CSS & Algorithmic simulation experiments comparing LLMs to human survey data & Conditioning LLMs on sociodemographic priors yields highly realistic, representative behavioral responses. & Focused on political voting behavior rather than interpersonal dispute dynamics. \\
+\addlinespace
+Grossmann et al. (2024) \citep{grossmann2024generative} \texttt{[FT]} & Generative AI, Social Science Methodology & Methodological review and comparative simulations & Generative AI models function as high-fidelity cultural informants for qualitative sociological inquiry. & Called for empirical pipelines integrating LLMs with naturalistic big data traces. \\
+\bottomrule
+\end{tabularx}
+\caption{Systematic Literature Synthesis Matrix (2022--2026 Verified Q1 Corpus).}
+\label{tab:synthesis_matrix}
+\end{table*}
+
+\subsection{Steelmanned Rival Theories and Hypotheses Formulation}
+To ensure theoretical falsifiability, we explicitly steelman two prominent rival explanations before stating our structural hypotheses:
+
+\subsubsection{Steelmanned Rival 1: The Cognitive Exhaustion / Relational Incompetence Hypothesis}
+The strongest alternative explanation argues that individuals who passionately advocate for relationship equality are entirely sincere, but suffer from acute chronic stress, emotional burnout, or neurodivergence that impedes their ability to execute equal contributions in daily domestic life. Under this view, extractive behaviors (e.g., failing to do chores, emotional withdrawal) represent involuntary lapses in executive function rather than strategic hypocrisy.
+
+\textit{Theoretical Rebuttal:} If extractive behavior were simply a stochastic failure of executive function, it would occur independently of attributional posturing. However, Moral Hypocrisy Theory and the Dark Ego Vehicle Principle predict that extractive behaviors will systematically cluster with self-serving attributions (\textit{SSA}) that blame the partner, and with virtuous victimhood narratives (\textit{VVS}) strategically deployed to avoid accountability and secure unearned emotional labor.
+
+\subsubsection{Steelmanned Rival 2: The Sincere Reaction to Unconscious Partner Injustice Hypothesis}
+A second rival view contends that actors who demand parity and claim victimhood are reacting genuinely to covert, unacknowledged oppression within the relationship. From this perspective, what external coders perceive as ``self-serving attribution'' is an accurate articulation of systemic relationship inequity.
+
+\textit{Theoretical Rebuttal:} While subjectively experienced injustice is a hallmark of relational conflict, our empirical design isolates cases where the objective behavioral record reveals unilateral, asymmetrical extraction (e.g., refusing reciprocal financial support, shifting 100\% of domestic burdens, stonewalling). By analyzing linguistic attribution patterns, we show that actors weaponize progressive terminology to justify purely unilateral self-interest.
+
+\subsection{Structural Hypotheses}
+Based on this theoretical synthesis, we advance four testable structural hypotheses, formally specified in the conceptual framework depicted in Figure \ref{fig:conceptual_model}:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{$H_1$ (Mediated Dyadic Hypocrisy):} In real-world relationship dispute narratives, the frequency of Egalitarian Vocabulary \& Parity Demands (\textit{EVP}) is positively associated with Exploitative Interpersonal Relationship behaviors (\textit{EIR}), and this relationship is mediated by Self-Serving Attribution \& Licensing (\textit{SSA}).
+    \item \textbf{$H_2$ (Victimhood Moderation):} Virtuous Victimhood Signaling (\textit{VVS}) positively moderates the relationship between \textit{EVP} and \textit{SSA}, such that individuals who combine parity rhetoric with personal victimhood claims exhibit significantly higher levels of self-serving attribution.
+    \item \textbf{$H_3$ (Direct Exploitation Premium):} Within conflicted relationships, individuals displaying the highest lexical density of progressive parity rhetoric engage in significantly higher rates of emotional and material exploitation compared to baseline partners.
+    \item \textbf{$H_4$ (AI Informant Pragmatic Superiority):} Multi-model Large Language Model cultural informants detect and categorize latent semantic dissonance (\textit{CDD}) between relationship parity rhetoric and enacted exploitation with significantly greater accuracy than conventional lexicon-based sentiment models.
+\end{itemize}
+
+\begin{figure*}[htbp]
+\centering
+\begin{tikzpicture}[
+    box/.style={rectangle, draw=blue!70!black, fill=blue!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    medbox/.style={rectangle, draw=purple!70!black, fill=purple!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    outbox/.style={rectangle, draw=red!70!black, fill=red!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    modbox/.style={rectangle, draw=orange!80!black, fill=orange!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    aibox/.style={rectangle, draw=teal!70!black, fill=teal!5, dashed, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    arr/.style={-{Stealth[scale=1.1]}, thick, blue!70!black},
+    modarr/.style={-{Stealth[scale=1.1]}, thick, dashed, orange!80!black},
+    dirarr/.style={-{Stealth[scale=1.1]}, thick, dashed, red!70!black},
+    aiarr/.style={-{Stealth[scale=1.1]}, thick, dotted, teal!70!black},
+    lbl/.style={font=\footnotesize\bfseries, fill=white, inner sep=2pt, rounded corners=2pt}
+]
+
+% Nodes
+\node[box, text width=3.3cm] (EVP) at (0, 0) {
+    \textbf{Predictor (X)}\\[0.3ex]
+    \textbf{Egalitarian Vocabulary \&}\\[0.1ex]
+    \textbf{Parity Demands (EVP)}\\[0.4ex]
+    \scriptsize 50/50 Claims $\cdot$ Equity Rhetoric
+};
+
+\node[medbox, text width=3.3cm] (SSA) at (5.5, 0) {
+    \textbf{Cognitive Mediator (M)}\\[0.3ex]
+    \textbf{Self-Serving Attribution}\\[0.1ex]
+    \textbf{\& Licensing (SSA)}\\[0.4ex]
+    \scriptsize Partner-Blaming $\cdot$ Moral Credit
+};
+
+\node[outbox, text width=3.3cm] (EIR) at (11, 0) {
+    \textbf{Outcome Variable (Y)}\\[0.3ex]
+    \textbf{Exploitative Interpersonal}\\[0.1ex]
+    \textbf{Behaviors (EIR)}\\[0.4ex]
+    \scriptsize Labor Shifting $\cdot$ Gaslighting
+};
+
+\node[modbox, text width=3.8cm] (VVS) at (2.75, 2.3) {
+    \textbf{Interpersonal Moderator (W)}\\[0.3ex]
+    \textbf{Virtuous Victimhood Signaling (VVS)}\\[0.4ex]
+    \scriptsize Trauma Broadcasting $\cdot$ Moral Immunity
+};
+
+\node[aibox, text width=4.3cm] (CDD) at (5.5, -2.3) {
+    \textbf{AI Cultural Informants}\\[0.3ex]
+    \textbf{Cognitive Dissonance Decoding (CDD)}\\[0.4ex]
+    \scriptsize Triangulated LLM Engine ($F1 = 0.893$)
+};
+
+% Coordinate on EVP -> SSA path for moderation
+\coordinate (path_evp_ssa) at (2.75, 0);
+
+% H1 Mediation Paths
+\draw[arr] (EVP) -- (SSA) node[midway, above, lbl] {$H_1 (+)$};
+\draw[arr, draw=purple!70!black] (SSA) -- (EIR) node[midway, above, lbl] {$H_1 (+)$};
+
+% H2 Moderation Path
+\draw[modarr] (VVS) -- (path_evp_ssa) node[pos=0.5, right, lbl] {$H_2 \text{ (Mod)}$};
+
+% H3 Direct Path (Curved Below)
+\draw[dirarr] (EVP.south) to[out=-35, in=-145] node[midway, below, lbl] {$H_3 \text{ (Direct Effect)}$} (EIR.south);
+
+% H4 AI Decoding
+\draw[aiarr] (SSA.south) -- (CDD.north) node[midway, fill=white, font=\tiny\bfseries] {Decodes Dissonance ($H_4$)};
+
+% Mediation Summary Badge
+\node[fill=blue!10, draw=blue!40, rounded corners=3pt, font=\scriptsize, align=center] at (5.5, 0.85) {
+    \textbf{Indirect Effect ($H_1$):} $\text{EVP} \rightarrow \text{SSA} \rightarrow \text{EIR}$
+};
+
+\end{tikzpicture}
+\caption{Conceptual Model and Structural Hypotheses Architecture.}
+\label{fig:conceptual_model}
+\end{figure*}

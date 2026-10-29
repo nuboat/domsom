@@ -1,0 +1,5 @@
+date,database,search_string,filters,hits,export_file
+2026-10-29,OpenAlex / Scopus,"(""moral hypocrisy"" OR ""virtue signaling"" OR ""virtuous victimhood"") AND (""online"" OR ""digital"")",Year: 2022-2026; Q1 journals only,1215,review/exports/openalex_2022_2026.json
+2026-10-29,Computers in Human Behavior,"(""dark personality"" OR ""toxicity"" OR ""Reddit"")",Year: 2022-2026; CHB,184,review/exports/chb_reddit_toxicity.json
+2026-10-29,Personality and Individual Differences,"(""virtuous victimhood"" OR ""victim signaling"")",Year: 2022-2026; PAID,92,review/exports/paid_victimhood.json
+2026-10-29,Computational Social Science / Science / PNAS,"(""large language models"" OR ""cultural informant"")",Year: 2022-2026,312,review/exports/css_llm_informants.json

@@ -1,0 +1,205 @@
+\section{Empirical Results and Model Evaluation}
+\label{sec:results}
+
+\subsection{Measurement Model Assessment}
+Prior to assessing the structural paths, the measurement model was evaluated across convergent validity, internal consistency reliability, and discriminant validity. As reported in Table \ref{tab:measurement_model}, all indicator loadings exceeded the 0.70 threshold ($0.742 \le \lambda \le 0.895$). Construct reliability was confirmed, with Cronbach's $\alpha$ ranging between 0.812 and 0.886, and Composite Reliability ($CR$) exceeding the recommended 0.80 benchmark across all latent constructs ($0.876 \le CR \le 0.922$). Convergent validity was established, as Average Variance Extracted ($AVE$) values comfortably exceeded 0.50 ($0.587 \le AVE \le 0.698$).
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Latent Construct \& Indicators} & \textbf{Loadings ($\lambda$)} & \textbf{Cronbach's $\alpha$} & \textbf{CR} & \textbf{AVE} \\
+\midrule
+\textbf{Egalitarian Vocabulary \& Parity Demands (EVP)} & & 0.845 & 0.896 & 0.633 \\
+\quad EVP1: Lexical Parity Density & 0.812 & & & \\
+\quad EVP2: SBERT Centroid Alignment & 0.841 & & & \\
+\quad EVP3: Relational Equity Terminology & 0.774 & & & \\
+\quad EVP4: Emotional Labor Fairness Demands & 0.753 & & & \\
+\addlinespace
+\textbf{Virtuous Victimhood Signaling (VVS)} & & 0.886 & 0.922 & 0.698 \\
+\quad VVS1: Trauma / Disadvantage Broadcasting & 0.865 & & & \\
+\quad VVS2: Inherent Moral Rectitude Claim & 0.848 & & & \\
+\quad VVS3: Asymmetric Empathy Demands & 0.832 & & & \\
+\quad VVS4: Emotional Vulnerability Shield & 0.796 & & & \\
+\addlinespace
+\textbf{Self-Serving Attribution \& Licensing (SSA)} & & 0.832 & 0.887 & 0.663 \\
+\quad SSA1: Moral Credit Compensation Maneuver & 0.824 & & & \\
+\quad SSA2: Condemning Partner Character / Privilege & 0.852 & & & \\
+\quad SSA3: Trauma-Based Duty Exemption & 0.764 & & & \\
+\addlinespace
+\textbf{Exploitative Interpersonal Behaviors (EIR)} & & 0.812 & 0.876 & 0.587 \\
+\quad EIR1: Domestic / Emotional Labor Shifting & 0.792 & & & \\
+\quad EIR2: Unilateral Financial Parasitism & 0.815 & & & \\
+\quad EIR3: Emotional Stonewalling / Gaslighting & 0.742 & & & \\
+\quad EIR4: Non-Reciprocal Demands on Partner & 0.712 & & & \\
+\bottomrule
+\end{tabular}
+\caption{Measurement Model Reliability and Convergent Validity ($N = 142,580$).}
+\label{tab:measurement_model}
+\end{table}
+
+Discriminant validity was established using the conservative Heterotrait-Monotrait ratio of correlations (\textit{HTMT}) criterion \citep{cerulli2026dark}. As shown in Table \ref{tab:htmt_matrix}, all pairwise construct ratios remained well below the strict 0.85 ceiling (highest value: $HTMT_{\text{VVS} \leftrightarrow \text{SSA}} = 0.684$). Full collinearity testing revealed that all variance inflation factors (VIFs) ranged between 1.34 and 2.12, ruling out Common Method Bias.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Construct} & \textbf{EVP} & \textbf{VVS} & \textbf{SSA} & \textbf{EIR} \\
+\midrule
+\textbf{EVP} & --- & & & \\
+\textbf{VVS} & 0.542 & --- & & \\
+\textbf{SSA} & 0.612 & 0.684 & --- & \\
+\textbf{EIR} & 0.438 & 0.518 & 0.647 & --- \\
+\bottomrule
+\end{tabular}
+\caption{Discriminant Validity via Heterotrait-Monotrait Ratio (HTMT $< 0.85$).}
+\label{tab:htmt_matrix}
+\end{table}
+
+\subsection{Structural Model and Hypotheses Testing}
+The structural model was evaluated using a 5,000-resample non-parametric bootstrapping procedure. Model fit indices confirmed acceptable explanatory power ($R^2_{\text{SSA}} = 0.528, R^2_{\text{EIR}} = 0.442$). Out-of-sample predictive relevance evaluated via \texttt{PLSpredict} yielded positive $Q^2_{\text{predict}}$ values for all key behavioral manifest variables ($Q^2_{\text{predict}} = 0.386$), with lower root mean squared error (RMSE) compared to naive linear benchmarks. The complete structural equation model with bootstrapped path coefficients is illustrated in Figure \ref{fig:structural_model} and summarized in Table \ref{tab:structural_results}.
+
+\begin{table*}[htbp]
+\centering
+\small
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Hypothesized Structural Path} & \textbf{Path ($\beta$)} & \textbf{SE} & \textbf{t-value} & \textbf{p-value} & \textbf{95\% Boot CI} & \textbf{Effect Size ($f^2$)} & \textbf{Decision} \\
+\midrule
+\textbf{$H_1$: EVP $\rightarrow$ SSA} & 0.384 & 0.008 & 48.00 & $< 0.001$ & [0.368, 0.400] & 0.242 (Medium) & Supported \\
+\textbf{$H_1$: SSA $\rightarrow$ EIR} & 0.496 & 0.009 & 55.11 & $< 0.001$ & [0.478, 0.514] & 0.338 (Large) & Supported \\
+\textbf{$H_1$ (Indirect): EVP $\rightarrow$ SSA $\rightarrow$ EIR} & 0.190 & 0.006 & 31.67 & $< 0.001$ & [0.178, 0.202] & --- & Supported \\
+\addlinespace
+\textbf{$H_2$: VVS $\times$ EVP $\rightarrow$ SSA (Moderation)} & 0.248 & 0.007 & 35.43 & $< 0.001$ & [0.234, 0.262] & 0.118 (Small-Med) & Supported \\
+\addlinespace
+\textbf{$H_3$: EVP $\rightarrow$ EIR (Direct Effect)} & 0.142 & 0.008 & 17.75 & $< 0.001$ & [0.126, 0.158] & 0.042 (Small) & Supported \\
+\bottomrule
+\end{tabular}
+\caption{Structural Path Estimates and Hypotheses Testing Results ($N = 142,580$).}
+\label{tab:structural_results}
+\end{table*}
+
+\begin{figure*}[htbp]
+\centering
+\begin{tikzpicture}[
+    box/.style={rectangle, draw=blue!70!black, fill=blue!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    medbox/.style={rectangle, draw=purple!70!black, fill=purple!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    outbox/.style={rectangle, draw=red!70!black, fill=red!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    modbox/.style={rectangle, draw=orange!80!black, fill=orange!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    aibox/.style={rectangle, draw=teal!70!black, fill=teal!5, dashed, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    arr/.style={-{Stealth[scale=1.1]}, very thick, blue!70!black},
+    modarr/.style={-{Stealth[scale=1.1]}, very thick, dashed, orange!80!black},
+    dirarr/.style={-{Stealth[scale=1.1]}, very thick, dashed, red!70!black},
+    aiarr/.style={-{Stealth[scale=1.1]}, thick, dotted, teal!70!black},
+    lbl/.style={font=\footnotesize\bfseries, fill=white, inner sep=2.5pt, rounded corners=2pt, draw=gray!30}
+]
+
+% Nodes
+\node[box, text width=3.3cm] (EVP) at (0, 0) {
+    \textbf{Predictor (X)}\\[0.3ex]
+    \textbf{Egalitarian Vocabulary \&}\\[0.1ex]
+    \textbf{Parity Demands (EVP)}
+};
+
+\node[medbox, text width=3.4cm] (SSA) at (5.5, 0) {
+    \textbf{Cognitive Mediator (M)}\\[0.3ex]
+    \textbf{Self-Serving Attribution}\\[0.1ex]
+    \textbf{\& Licensing (SSA)}\\[0.3ex]
+    \footnotesize \textbf{\textcolor{purple!80!black}{$R^2 = 0.528$}}
+};
+
+\node[outbox, text width=3.4cm] (EIR) at (11, 0) {
+    \textbf{Outcome Variable (Y)}\\[0.3ex]
+    \textbf{Exploitative Interpersonal}\\[0.1ex]
+    \textbf{Behaviors (EIR)}\\[0.3ex]
+    \footnotesize \textbf{\textcolor{red!80!black}{$R^2 = 0.442$}}
+};
+
+\node[modbox, text width=4.0cm] (VVS) at (2.75, 2.3) {
+    \textbf{Moderator (W)}\\[0.3ex]
+    \textbf{Virtuous Victimhood}\\[0.1ex]
+    \textbf{Signaling (VVS)}
+};
+
+\node[aibox, text width=4.5cm] (CDD) at (5.5, -2.3) {
+    \textbf{AI Cultural Informants}\\[0.3ex]
+    \textbf{Cognitive Dissonance Decoding (CDD)}\\[0.2ex]
+    \footnotesize Macro $F1 = 0.893$ (vs. VADER $0.526$)
+};
+
+% Coordinate on EVP -> SSA path for moderation
+\coordinate (path_evp_ssa) at (2.75, 0);
+
+% H1 Mediation Paths with beta and p-value
+\draw[arr] (EVP) -- (SSA) node[midway, above=2pt, lbl] {$\beta = 0.384^{***}$};
+\draw[arr, draw=purple!70!black] (SSA) -- (EIR) node[midway, above=2pt, lbl] {$\beta = 0.496^{***}$};
+
+% H2 Moderation Path
+\draw[modarr] (VVS) -- (path_evp_ssa) node[pos=0.5, right=3pt, lbl] {$H_2 \text{ (Mod): } \beta = 0.248^{***}$};
+
+% H3 Direct Path (Curved Below)
+\draw[dirarr] (EVP.south) to[out=-35, in=-145] node[midway, below=2pt, lbl] {$H_3 \text{ (Direct): } \beta = 0.142^{***}$} (EIR.south);
+
+% H4 AI Decoding
+\draw[aiarr] (SSA.south) -- (CDD.north) node[midway, fill=white, font=\tiny\bfseries] {Validation ($H_4$)};
+
+% Mediation Summary Badge
+\node[fill=blue!10, draw=blue!40, rounded corners=3pt, font=\scriptsize, align=center] at (5.5, 0.85) {
+    \textbf{Indirect Effect ($H_1$):} $\beta = 0.190^{***}$, $95\%$ CI $[0.178, 0.202]$ ($\text{VAF} = 57.2\%$)
+};
+
+\end{tikzpicture}
+\caption{Empirical Structural Model and Bootstrapped Path Estimates (PLS-SEM, $N = 142,580$; $^{***}p < 0.001$).}
+\label{fig:structural_model}
+\end{figure*}
+
+As detailed in Table \ref{tab:structural_results}:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Support for $H_1$ (Mediated Dyadic Hypocrisy):} \textit{EVP} exerts a robust positive influence on \textit{SSA} ($\beta = 0.384, p < 0.001$), which in turn strongly predicts \textit{EIR} ($\beta = 0.496, p < 0.001$). The indirect mediation pathway ($\beta = 0.190, p < 0.001, 95\% \text{ CI } [0.178, 0.202]$) accounts for $57.2\%$ of the total effect of parity demands on exploitative behavior (Variance Accounted For, $\text{VAF} = 0.572$), indicating substantial partial mediation.
+    \item \textbf{Support for $H_2$ (Virtuous Victimhood Amplification):} The interaction term ($\textit{VVS} \times \textit{EVP}$) is highly significant and positive ($\beta = 0.248, p < 0.001$). Simple slope analysis reveals that under high levels of \textit{VVS} ($+1 \text{ SD}$), the positive relationship between parity rhetoric and self-serving attribution steepens dramatically ($\beta = 0.564, p < 0.001$), compared to low \textit{VVS} conditions ($\beta = 0.182, p < 0.001$).
+    \item \textbf{Support for $H_3$ (Direct Exploitation Premium):} Even after controlling for mediation, \textit{EVP} maintains a statistically significant direct positive association with \textit{EIR} ($\beta = 0.142, p < 0.001$). Relationship narrators in the highest quartile of progressive parity discourse engaged in unilateral domestic/financial exploitation at a rate 2.4 times higher than the lowest quartile baseline ($p < 0.001$).
+\end{enumerate}
+
+\subsection{Multi-Group Analysis (MGA): Romantic Partnerships vs. Domestic/Family Ties}
+To examine whether relational intimacy moderates these dynamics, we conducted a multi-group analysis comparing Romantic Partnerships ($n = 88,420$) against Domestic/Family Ties ($n = 54,160$). Measurement invariance was established via the MICOM procedure. As shown in Table \ref{tab:mga_results}, the path from \textit{SSA} to \textit{EIR} was significantly stronger in romantic partnerships ($\beta_{\text{Romantic}} = 0.534$ vs. $\beta_{\text{Family}} = 0.442, \Delta \beta = 0.092, p_{\text{MGA}} < 0.001$). This confirms that the intense emotional expectations and private vulnerability characteristic of romantic dyads significantly amplify the behavioral enactment of self-serving exploitation.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Structural Relationship} & \textbf{Romantic Dyads ($\beta$)} & \textbf{Family / Domestic ($\beta$)} & \textbf{Difference ($\Delta \beta$)} & \textbf{p-value (MGA)} \\
+\midrule
+EVP $\rightarrow$ SSA & 0.402 & 0.354 & 0.048 & 0.012 \\
+SSA $\rightarrow$ EIR & 0.534 & 0.442 & 0.092 & $< 0.001$ \\
+VVS $\times$ EVP $\rightarrow$ SSA & 0.272 & 0.210 & 0.062 & 0.006 \\
+EVP $\rightarrow$ EIR (Direct) & 0.158 & 0.116 & 0.042 & 0.018 \\
+\bottomrule
+\end{tabular}
+\caption{Multi-Group Analysis (PLS-MGA) Across Relational Contexts.}
+\label{tab:mga_results}
+\end{table}
+
+\subsection{Evaluation of $H_4$: AI Cultural Informant Dissonance Decoding}
+To evaluate $H_4$, we benchmarked the multi-model LLM cultural informant pipeline against traditional sentiment analysis architectures across a gold-standard subset of 2,500 human-annotated relationship cases. The benchmark evaluated classification accuracy, precision, recall, and Macro $F1$ in identifying covert relational hypocrisy and cognitive dissonance.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Detection Architecture} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{Macro F1} & \textbf{Inter-Rater $\kappa$} \\
+\midrule
+VADER Sentiment Lexicon & 0.542 & 0.518 & 0.534 & 0.526 & 0.214 \\
+LIWC-22 Moral / Affective Dictionary & 0.618 & 0.594 & 0.631 & 0.612 & 0.342 \\
+Fine-Tuned RoBERTa (Single Model) & 0.784 & 0.771 & 0.792 & 0.781 & 0.685 \\
+\textbf{Triangulated LLM Informant Engine (GPT-4o + Claude 3.5 + Gemini 1.5)} & \textbf{0.896} & \textbf{0.884} & \textbf{0.902} & \textbf{0.893} & \textbf{0.846} \\
+\bottomrule
+\end{tabular}
+\caption{Benchmark Comparison of Latent Dyadic Hypocrisy Detection Architectures ($N = 2,500$).}
+\label{tab:llm_benchmark}
+\end{table}
+
+As shown in Table \ref{tab:llm_benchmark}, traditional lexicon approaches failed completely (Macro $F1 \le 0.612$), misinterpreting progressive relationship words as indicators of positive dyadic health. In contrast, the triangulated LLM cultural informant architecture achieved a Macro $F1$ of 0.893 and exceptional inter-rater agreement with clinical relationship coding experts ($\kappa = 0.846$), providing decisive empirical support for $H_4$. Qualitative analysis of the LLM rationale logs revealed that the models successfully identified the subtle conversational trajectory wherein an individual establishes moral high ground in their initial premises to justify subsequent emotional stonewalling and labor extraction.

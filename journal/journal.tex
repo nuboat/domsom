@@ -1,0 +1,76 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, fit, backgrounds}
+
+% Draft Running Headers to prevent misunderstanding as published work
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textit{Peerapat Asoktummarungsr --- The Hypocrisy of Parity (Draft)}}
+\fancyhead[R]{\small \textbf{\textcolor{red!75!black}{[DRAFT --- NOT FOR CITATION AS PUBLISHED]}}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Gap Markers per AGENTS.md §6.5
+\newcommand{\NEEDSRC}[1]{\textbf{\textcolor{red!75!black}{[Source needed: #1]}}}
+\newcommand{\NEEDPDF}[1]{\textbf{\textcolor{orange!75!black}{[Full text needed: #1]}}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue!70!black,
+    urlcolor=blue!70!black
+}
+
+\title{\textbf{\Large The Hypocrisy of Parity: Discursive Patterns of Victimhood Signaling and Self-Serving Attribution in Exploitative Relationships}\\[1.2ex]
+\large \textbf{\textcolor{red!75!black}{(Draft Manuscript --- Working Paper Under Review)}}}
+
+\author{\textbf{Peerapat Asoktummarungsr}}
+
+\date{\today\ (Draft)}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{center}
+\small \textcolor{red!75!black}{\textbf{[Draft Working Paper --- Not for Citation or Distribution as a Published Article]}}
+\end{center}
+\vspace{1ex}
+
+\begin{abstract}
+\noindent In contemporary interpersonal, romantic, and domestic relationships, individuals increasingly adopt egalitarian discourse—frequently demanding strict 50/50 parity, equal division of emotional labor, and structural fairness in the treatment of others. However, an acute behavioral paradox often unfolds within private interpersonal dynamics: individuals who most vocally demand parity and broadcast personal victimhood frequently engage in systematic, self-serving exploitation of others (romantic partners, family members, and peers). Because traditional laboratory experiments and self-report surveys suffer from pervasive social desirability bias, this study introduces a computational mixed-methods architecture that leverages naturalistic online relationship dispute disclosures ($N = 142,580$ real-world relationship narratives from Reddit adjudication archives) as an unobtrusive observational window into authentic interpersonal treatment of others. Integrating Moral Hypocrisy Theory, Self-Serving Attribution Theory, and the Dark Ego Vehicle Principle, we specify and empirically test a structural equation model of dyadic hypocrisy. Our findings reveal that Egalitarian Vocabulary \& Parity Demands (\textit{EVP}) are positively associated with Exploitative Interpersonal Relationship behaviors (\textit{EIR}; $\beta = 0.284, p < 0.001$), fully mediated by Self-Serving Attribution \& Licensing (\textit{SSA}; indirect effect $\beta = 0.190, p < 0.001$). Furthermore, Virtuous Victimhood Signaling (\textit{VVS}) dramatically amplifies this relationship ($\beta = 0.248, p < 0.001$), operating as an offensive interpersonal shield to extract concessions while deflecting moral culpability. Multi-model Large Language Model (LLM) cultural informants demonstrate superior sensitivity in decoding covert relational dissonance ($F1 = 0.893$) compared to standard sentiment lexicons. We conclude by discussing implications for relationship counseling, attribution theory, and computational behavioral methodologies.
+\end{abstract}
+
+\vspace{1ex}
+\noindent \textbf{Keywords:} Interpersonal Exploitation, Moral Hypocrisy, Virtuous Victimhood Signaling, Self-Serving Attribution, Discursive Psychology, Interpersonal Communication, Dyadic Relationships, Computational Social Science, Large Language Models.
+
+\vspace{2ex}
+\hrule
+\vspace{2ex}
+
+% --- Modular Chapter Inclusions ---
+\input{chapter1-introduction}
+\input{chapter2-literature-review}
+\input{chapter3-methodology}
+\input{chapter4-results}
+\input{chapter5-discussion}
+
+\newpage
+\bibliographystyle{apalike}
+\bibliography{library}
+
+\end{document}

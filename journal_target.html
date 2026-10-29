@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>การจัดกลุ่มสาขาวิชาและแนวทางการเลือกวารสารเป้าหมาย: The Hypocrisy of Parity</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --primary-dark: #172554;
+      --accent-purple: #7e22ce;
+      --accent-emerald: #059669;
+      --accent-amber: #d97706;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --success: #166534;
+      --success-bg: #dcfce7;
+      --warning: #9a3412;
+      --warning-bg: #ffedd5;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Sarabun", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.8;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 0;
+      margin-bottom: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .header-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      margin-right: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .badge-q1 { background: var(--success-bg); color: var(--success); border: 1px solid #86efac; }
+    .badge-is { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
+    .badge-purple { background: #f3e8ff; color: #7e22ce; border: 1px solid #d8b4fe; }
+    .badge-gold { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+    h1 {
+      font-size: 2.1rem;
+      color: #0f172a;
+      line-height: 1.3;
+      margin: 0.5rem 0;
+    }
+    h2.subtitle {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+    .nav-bar {
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      font-size: 0.95rem;
+    }
+    .nav-bar a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav-bar a:hover { text-decoration: underline; }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    h2.sec-title {
+      color: var(--primary);
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.6rem;
+      margin-top: 0;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h3.sub-title {
+      color: #1e293b;
+      font-size: 1.2rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .pillar-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 1.4rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .pillar-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+    }
+    .pillar-card strong.pillar-title {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+    }
+    .pillar-primary { border-top: 4px solid var(--primary-light); }
+    .pillar-comm { border-top: 4px solid var(--accent-purple); }
+    .pillar-soc { border-top: 4px solid var(--accent-emerald); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.85rem 1rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+    }
+    tr:nth-child(even) { background: #fafafa; }
+    tr.primary-row { background: #eff6ff; }
+    .stat-val {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 600;
+      color: #0369a1;
+    }
+    .highlight-box {
+      background: #eff6ff;
+      border-left: 4px solid var(--primary-light);
+      border-radius: 0 8px 8px 0;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .tag {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 4px;
+      margin-right: 0.3rem;
+      margin-top: 0.2rem;
+    }
+    .tag-blue { background: #dbeafe; color: #1e40af; }
+    .tag-green { background: #dcfce7; color: #166534; }
+    .tag-purple { background: #f3e8ff; color: #7e22ce; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <span class="badge badge-q1">SJR Q1 Target Ladder</span>
+      <span class="badge badge-is">Discursive Psychology &amp; Interpersonal Communication</span>
+      <span class="badge badge-purple">Social Sciences / Language &amp; Social Interaction</span>
+      <h1>การจัดกลุ่มสาขาวิชาและแนวทางการเลือกวารสารเป้าหมาย (Research Classification &amp; Target Journals)</h1>
+      <h2 class="subtitle">คู่มือการวางตำแหน่งบทความวิจัยระดับนานาชาติ (Q1 Journal Submission Roadmap &amp; Strategic Fit)</h2>
+      <div style="font-size:0.95rem; color:#334155;">
+        <strong>ชื่องานวิจัย:</strong> <em>The Hypocrisy of Parity: Discursive Patterns of Victimhood Signaling and Self-Serving Attribution in Exploitative Relationships</em><br>
+        <strong>ผู้วิจัย (Lead Author):</strong> Peerapat Asoktummarungsr<br>
+        <strong>วารสารเป้าหมายหลัก:</strong> <em>Journal of Language and Social Psychology</em> (SAGE, Q1) · <em>Discourse Studies</em> (SAGE, Q1)
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="nav-bar">
+      <strong>เอกสารที่เกี่ยวข้องในโครงการ:</strong>
+      <a href="journal/journal.pdf">บทความวิจัยฉบับเต็ม (journal.pdf - 18 หน้า)</a>
+      <a href="journal/cover-letter.pdf">จดหมายนำส่ง (cover-letter.pdf)</a>
+      <a href="journal_thai.html">หน้าตรวจสอบงานวิจัยบทที่ 1-5 (journal_thai.html)</a>
+      <a href="conceptual-model.html">แบบจำลองเชิงมโนทัศน์ (conceptual-model.html)</a>
+      <a href="ranking/quartile-checks.csv">บันทึกตรวจสอบควอร์ไทล์ (quartile-checks.csv)</a>
+    </div>
+
+    <div class="highlight-box">
+      <strong>หลักการกำหนดเป้าหมายเชิงภววิทยา (Core Ontological Clarification):</strong><br>
+      หัวใจของงานวิจัยนี้คือการศึกษา <strong>"พฤติกรรมและการปฏิบัติต่อผู้อื่นในชีวิตจริง (ความสัมพันธ์ใกล้ชิด เช่น คู่รัก ชีวิตคู่ ครอบครัว หรือเพื่อนร่วมงาน)"</strong> โดยมี Social Media และกระทู้ข้อพิพาทสาธารณะ (Reddit) เป็นเพียง <strong>"หน้าต่างสังเกตพฤติกรรมตามธรรมชาติ (Naturalistic Observational Window)"</strong> เพื่อแก้ไขข้อจำกัดร้ายแรงของแบบสอบถามประเมินตนเอง (Social Desirability Bias) ซึ่งผู้กระทำผิดในความสัมพันธ์ไม่มีวันยอมรับตรง ๆ ในแบบสอบถาม
+    </div>
+
+    <!-- SECTION 1: THREE-PILLAR RESEARCH CLASSIFICATION -->
+    <section id="pillars">
+      <h2 class="sec-title">1. งานวิจัยนี้จัดอยู่ในกลุ่มสาขาวิชาใด? (Three-Pillar Research Classification)</h2>
+      <p>
+        หากต้องระบุสาขาวิชา (Field of Study) ในระบบฐานข้อมูลสากล (Scopus หรือ Web of Science) งานวิจัยชิ้นนี้จัดอยู่ในจุดตัดของ 3 สาขาวิชาหลัก โดยมี <strong>Social Psychology &amp; Discursive Psychology</strong> เป็นเสาหลักในการวางกรอบทฤษฎี:
+      </p>
+
+      <div class="grid-3">
+        <div class="pillar-card pillar-primary">
+          <span class="badge badge-is" style="margin-bottom:0.4rem;">กลุ่มหลัก (Primary Domain)</span>
+          <strong class="pillar-title" style="color:var(--primary);">1. Social Psychology &amp; Discursive Psychology<br><small style="font-weight:400; color:var(--text-muted);">(จิตวิทยาสังคม และจิตวิทยาวาทกรรม)</small></strong>
+          <p style="font-size:0.9rem; color:#334155; margin-bottom:0.8rem;">
+            <strong>เหตุผลที่อยู่มิตินี้:</strong> ตัวแปรแกนหลักของงานคือ <em>Victimhood Signaling</em> และ <em>Self-Serving Attribution</em> ซึ่งเป็นแนวคิดทางจิตวิทยาสังคม แต่ถูกศึกษาผ่าน <strong>"รูปแบบวาทกรรม (Discursive Patterns)"</strong> ซึ่งตรงกับแขนง <strong>Discursive Psychology</strong> (Edwards &amp; Potter, 1992; Billig, 1996)
+          </p>
+          <div style="font-size:0.85rem; color:#475569; border-top:1px dashed #cbd5e1; padding-top:0.6rem;">
+            <strong>ประเด็นที่ศึกษา:</strong> มนุษย์ใช้ภาษา คำพูด และเรื่องเล่าความขัดแย้งในการจัดการความรับผิดชอบ (Blame Management) โยนความผิด และสร้างภาพลักษณ์อันชอบธรรมในชีวิตประจำวันอย่างไร
+          </div>
+          <div>
+            <span class="tag tag-blue">Discursive Patterns</span>
+            <span class="tag tag-blue">Attribution Theory</span>
+            <span class="tag tag-blue">Moral Hypocrisy</span>
+          </div>
+        </div>
+
+        <div class="pillar-card pillar-comm">
+          <span class="badge badge-purple" style="margin-bottom:0.4rem;">กลุ่มร่วม (Complementary Domain)</span>
+          <strong class="pillar-title" style="color:var(--accent-purple);">2. Interpersonal Communication &amp; Language Studies<br><small style="font-weight:400; color:var(--text-muted);">(การสื่อสารระหว่างบุคคล และวาทกรรมศึกษา)</small></strong>
+          <p style="font-size:0.9rem; color:#334155; margin-bottom:0.8rem;">
+            <strong>เหตุผลที่อยู่มิตินี้:</strong> งานวิจัยมุ่งแกะรอย "แพทเทิร์นการสื่อสาร" และกลยุทธ์ทางวาทกรรม (Rhetorical &amp; Discursive Strategies) ที่บุคคลใช้สร้างข้ออ้างในการปฏิเสธหน้าที่
+          </p>
+          <div style="font-size:0.85rem; color:#475569; border-top:1px dashed #cbd5e1; padding-top:0.6rem;">
+            <strong>ประเด็นที่ศึกษา:</strong> การสร้างข้ออ้าง (Accounts: Excuses &amp; Justifications ตามทฤษฎีของ Scott &amp; Lyman, 1968) การเรียกร้องความเห็นอกเห็นใจ (Empathy Extraction) และการใช้ศัพท์บำบัดจิตวิทยามาควบคุมคู่สนทนา (Therapeutic Gaslighting)
+          </div>
+          <div>
+            <span class="tag tag-purple">Accounts Theory</span>
+            <span class="tag tag-purple">Rhetorical Strategies</span>
+            <span class="tag tag-purple">Empathy Extraction</span>
+          </div>
+        </div>
+
+        <div class="pillar-card pillar-soc">
+          <span class="badge badge-gold" style="margin-bottom:0.4rem;">กลุ่มบริบท (Contextual Domain)</span>
+          <strong class="pillar-title" style="color:var(--accent-emerald);">3. Sociology of Relationships / Micro-Sociology<br><small style="font-weight:400; color:var(--text-muted);">(สังคมวิทยาความสัมพันธ์ และจุลสังคมวิทยา)</small></strong>
+          <p style="font-size:0.9rem; color:#334155; margin-bottom:0.8rem;">
+            <strong>เหตุผลที่อยู่มิตินี้:</strong> ปรากฏการณ์ที่เกิดขึ้นคือความสัมพันธ์เชิงเอารัดเอาเปรียบ (Exploitative Relationships) และความไม่สมดุลของอำนาจและศีลธรรมในการอยู่ร่วมกันของมนุษย์
+          </p>
+          <div style="font-size:0.85rem; color:#475569; border-top:1px dashed #cbd5e1; padding-top:0.6rem;">
+            <strong>ประเด็นที่ศึกษา:</strong> พลวัตของความสัมพันธ์ในชีวิตคู่ ครอบครัว และเพื่อนร่วมงาน การวางท่าทีเหนือกว่าทางศีลธรรม (Moral Grandstanding) และการแบ่งปันภาระงานบ้านและการดูแลทางอารมณ์ที่ไม่เท่าเทียม
+          </div>
+          <div>
+            <span class="tag tag-green">Power Asymmetry</span>
+            <span class="tag tag-green">Micro-Sociology</span>
+            <span class="tag tag-green">Dark Triad in Dyads</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TARGET JOURNALS ROADMAP -->
+    <section id="roadmap">
+      <h2 class="sec-title">2. แผนที่วารสารเป้าหมาย (Target Journals Roadmap by Tier)</h2>
+      <p>
+        เนื่องจากงานวิจัยนี้เป็น <strong>Computational Mixed-Methods</strong> ที่นำข้อมูลธรรมชาติจากโซเชียลมีเดีย (Reddit Disclosures) มาวิเคราะห์วาทกรรมและจิตวิทยาเชิงประจักษ์ วารสารที่เหมาะสมที่สุดจึงแบ่งออกเป็น 3 ระดับตามแนวทางการนำเสนอ:
+      </p>
+
+      <h3 class="sub-title" style="color:var(--primary); margin-top:1.2rem;">กลุ่มที่ 1: วารสารนานาชาติ สายจิตวิทยาวาทกรรมและการสื่อสาร (Primary Q1 Outlets)</h3>
+      <p style="font-size:0.92rem; color:var(--text-muted);">
+        วารสารกลุ่มนี้ให้ความสำคัญกับงานที่นำ <em>"ข้อความ/เรื่องเล่าที่เกิดขึ้นจริง (Naturalistic Data)"</em> มาแกะรอยหาแพทเทิร์นทางจิตวิทยาและการปกป้องตนเอง ตรงกับคำว่า <strong>Discursive Patterns</strong> มากที่สุด:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:25%;">ชื่อวารสาร (Journal Title)</th>
+            <th style="width:18%;">สำนักพิมพ์ / ระดับ</th>
+            <th style="width:15%;">ตัวชี้วัด (SJR 2024 / h-index)</th>
+            <th style="width:42%;">จุดเด่นและความสอดคล้องกับงานวิจัย (Fit Analysis)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="primary-row">
+            <td>
+              <strong style="color:var(--primary);">Journal of Language and Social Psychology</strong><br>
+              <small>ISSN: 0261-927X</small>
+            </td>
+            <td>
+              <strong>SAGE</strong><br>
+              <span class="badge badge-q1" style="margin:0.2rem 0 0 0;">Scopus Q1</span>
+            </td>
+            <td>
+              <span class="stat-val">SJR 1.12</span><br>
+              <small>h-index: 85</small>
+            </td>
+            <td>
+              <strong style="color:var(--primary);">[ตรงเป๊ะที่สุด - ลำดับที่ 1]</strong><br>
+              บรรณาธิการบริหาร: <strong>Prof. Nicholas A. Palomares</strong> (UT Austin)<br>
+              เป็นวารสารชั้นนำระดับโลกที่มุ่งเน้นจุดตัดระหว่าง <em>จิตวิทยาสังคม</em> (Attribution, Victimhood, Moral Self-Presentation) กับ <em>การใช้ภาษาจริง</em> (Discursive Patterns, Conversational Claims) บทความของเราส่งไปยังวารสารนี้โดยตรง
+            </td>
+          </tr>
+          <tr class="primary-row">
+            <td>
+              <strong style="color:var(--primary);">Discourse Studies</strong><br>
+              <small>ISSN: 1461-4456</small>
+            </td>
+            <td>
+              <strong>SAGE</strong><br>
+              <span class="badge badge-q1" style="margin:0.2rem 0 0 0;">Scopus Q1</span>
+            </td>
+            <td>
+              <span class="stat-val">SJR 1.05</span><br>
+              <small>h-index: 78</small>
+            </td>
+            <td>
+              <strong style="color:var(--primary);">[ตรงเป๊ะที่สุด - ลำดับที่ 2]</strong><br>
+              บรรณาธิการผู้ก่อตั้ง: <strong>Prof. Teun A. van Dijk</strong><br>
+              เน้นวิเคราะห์โครงสร้างการพูด การแก้ตัว (Accounts/Excuses) และการโยนความผิดในปฏิสัมพันธ์ของมนุษย์ (Interactional Blame Attribution) เหมาะอย่างยิ่งสำหรับมิติ Discursive Accounting
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Discourse &amp; Society</strong><br>
+              <small>ISSN: 0957-9265</small>
+            </td>
+            <td>
+              <strong>SAGE</strong><br>
+              <span class="badge badge-q1" style="margin:0.2rem 0 0 0;">Scopus Q1</span>
+            </td>
+            <td>
+              <span class="stat-val">SJR 1.42</span><br>
+              <small>h-index: 105</small>
+            </td>
+            <td>
+              เน้นศึกษาความสัมพันธ์ระหว่าง "ภาษา/วาทกรรม" กับ "อำนาจและการเอาเปรียบ" (Power Asymmetries &amp; Exploitation) ในโครงสร้างสังคม เหมาะหากขับเน้นมิติความไม่เท่าเทียมทางอำนาจ
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Qualitative Research in Psychology</strong><br>
+              <small>ISSN: 1478-0887</small>
+            </td>
+            <td>
+              <strong>Taylor &amp; Francis</strong><br>
+              <span class="badge badge-q1" style="margin:0.2rem 0 0 0;">Scopus Q1/Q2</span>
+            </td>
+            <td>
+              <span class="stat-val">SJR 0.89</span><br>
+              <small>h-index: 48</small>
+            </td>
+            <td>
+              เปิดรับงานจิตวิทยาที่ใช้ระเบียบวิธีวิจัยเชิงคุณภาพและการวิเคราะห์ข้อมูลข้อความจากสื่อสังคมออนไลน์ เพื่ออธิบายพฤติกรรมและการรู้คิดของมนุษย์
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-title" style="color:var(--accent-purple);">กลุ่มที่ 2: วารสารนานาชาติ สายความสัมพันธ์ระหว่างบุคคลและจิตวิทยาสังคม (Interpersonal &amp; Relational Dark Side)</h3>
+      <p style="font-size:0.92rem; color:var(--text-muted);">
+        หากปรับเน้นเนื้อหาไปที่พลวัตของ "ความสัมพันธ์" ด้านมืดของชีวิตคู่ (Dark Side of Relationships) และการเอารัดเอาเปรียบ:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:25%;">ชื่อวารสาร (Journal Title)</th>
+            <th style="width:18%;">สำนักพิมพ์ / ระดับ</th>
+            <th style="width:15%;">ตัวชี้วัด (SJR 2024 / h-index)</th>
+            <th style="width:42%;">จุดเด่นและความสอดคล้องกับงานวิจัย (Fit Analysis)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong style="color:var(--accent-purple);">Journal of Social and Personal Relationships (JSPR)</strong><br>
+              <small>ISSN: 0265-4075</small>
+            </td>
+            <td>
+              <strong>SAGE</strong><br>
+              <span class="badge badge-q1" style="margin:0.2rem 0 0 0;">Scopus Q1</span>
+            </td>
+            <td>
+              <span class="stat-val">SJR 1.32</span><br>
+              <small>h-index: 130</small>
+            </td>
+            <td>
+              <strong>วารสารตัวท็อปด้านความสัมพันธ์ระหว่างบุคคล:</strong> ครอบคลุมทั้งเพื่อน คู่รัก และครอบครัว เปิดรับงานที่ศึกษาด้านมืดของความสัมพันธ์ (Dark side of close relationships) และการเอารัดเอาเปรียบอย่างมาก
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Personal Relationships</strong><br>
+              <small>ISSN: 1350-4126</small>
+            </td>
+            <td>
+              <strong>Wiley</strong><br>
+              <span class="badge badge-q1" style="margin:0.2rem 0 0 0;">Scopus Q1/Q2</span>
+            </td>
+            <td>
+              <span class="stat-val">SJR 0.98</span><br>
+              <small>h-index: 82</small>
+            </td>
+            <td>
+              เน้นศึกษาพลวัตความสัมพันธ์ ความขัดแย้ง และความไม่เท่าเทียมกันในการแบ่งปันภาระระหว่างคู่รัก
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Qualitative Sociology</strong><br>
+              <small>ISSN: 0162-0436</small>
+            </td>
+            <td>
+              <strong>Springer</strong><br>
+              <span class="badge badge-q1" style="margin:0.2rem 0 0 0;">Scopus Q1/Q2</span>
+            </td>
+            <td>
+              <span class="stat-val">SJR 0.85</span><br>
+              <small>h-index: 56</small>
+            </td>
+            <td>
+              เหมาะหากนำเสนอด้วยโครงสร้าง Macro &rarr; Meso &rarr; Micro Funnel ในการอธิบายปรากฏการณ์ความย้อนแย้งของการเรียกร้องความเท่าเทียมในสังคม
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Symbolic Interaction</strong><br>
+              <small>ISSN: 0195-6086</small>
+            </td>
+            <td>
+              <strong>Wiley</strong><br>
+              <span class="badge badge-q1" style="margin:0.2rem 0 0 0;">Scopus Q1/Q2</span>
+            </td>
+            <td>
+              <span class="stat-val">SJR 0.74</span><br>
+              <small>h-index: 45</small>
+            </td>
+            <td>
+              เน้นศึกษาว่าคนเราสร้างความหมาย แสดงบทบาททางศีลธรรม (เช่น บทบาทเหยื่อผู้บริสุทธิ์) และจัดการความรู้สึกผิดชอบชั่วดีในชีวิตประจำวันอย่างไร
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="sub-title" style="color:var(--accent-emerald);">กลุ่มที่ 3: วารสารชั้นนำในประเทศไทย (ฐาน TCI กลุ่ม 1 / Scopus ในไทย)</h3>
+      <p style="font-size:0.92rem; color:var(--text-muted);">
+        หากต้องการตีพิมพ์เพื่อสำเร็จการศึกษาตามเกณฑ์สถาบัน หรือต้องการตีพิมพ์ในวารสารของมหาวิทยาลัยชั้นนำของไทย:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:30%;">ชื่อวารสาร (Journal Title)</th>
+            <th style="width:20%;">ฐานข้อมูล / ระดับ</th>
+            <th style="width:50%;">จุดเด่นและความเหมาะสม</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Kasetsart Journal of Social Sciences (KJSS)</strong><br>
+              <small>มหาวิทยาลัยเกษตรศาสตร์</small>
+            </td>
+            <td>
+              <span class="badge badge-q1">Scopus</span>
+              <span class="badge badge-is">TCI กลุ่ม 1</span>
+            </td>
+            <td>
+              รับบทความภาษาอังกฤษ เป็นวารสารชั้นนำระดับสากลของไทย เปิดกว้างสำหรับงานวิจัยสหวิทยาการข้ามศาสตร์ทั้งจิตวิทยา สังคมวิทยา และการสื่อสาร
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Journal of Behavioral Science</strong><br>
+              <small>วารสารพฤติกรรมศาสตร์ (สถาบันวิจัยพฤติกรรมศาสตร์ มศว)</small>
+            </td>
+            <td>
+              <span class="badge badge-q1">ACI</span>
+              <span class="badge badge-is">TCI กลุ่ม 1</span>
+            </td>
+            <td>
+              ตรงกับสายพฤติกรรมศาสตร์และจิตวิทยาสังคมโดยตรง เปิดรับงานวิจัยที่ใช้แนวคิดทางจิตวิทยาในการอธิบายพฤติกรรมและปฏิสัมพันธ์ของมนุษย์
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>วารสารศาสตร์ (Journal of Communication Arts)</strong><br>
+              <small>คณะนิเทศศาสตร์ จุฬาฯ หรือ คณะวารสารศาสตร์ฯ มธ.</small>
+            </td>
+            <td>
+              <span class="badge badge-is">TCI กลุ่ม 1</span>
+            </td>
+            <td>
+              เหมาะอย่างยิ่งหากขับเน้นมิติของการวิเคราะห์วาทกรรม (Discourse Analysis) รูปแบบภาษา และกลยุทธ์การสื่อสารในความสัมพันธ์
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>วารสารสังคมศาสตร์ / วารสารจิตวิทยา</strong><br>
+              <small>จุฬาลงกรณ์มหาวิทยาลัย, ธรรมศาสตร์, เชียงใหม่, มหิดล</small>
+            </td>
+            <td>
+              <span class="badge badge-is">TCI กลุ่ม 1</span>
+            </td>
+            <td>
+              รองรับเกณฑ์การสำเร็จการศึกษาระดับปริญญาเอก สามารถส่งได้ทั้งในกลุ่มสาขาสังคมวิทยา มานุษยวิทยา และจิตวิทยา
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION 3: STRATEGIC FIT & METHODOLOGICAL ADVANTAGES -->
+    <section id="strategy">
+      <h2 class="sec-title">3. เหตุผลเชิงยุทธศาสตร์และความสอดคล้องกับระเบียบวิธีวิจัย (Methodological Fit)</h2>
+      
+      <div class="highlight-box" style="background:#ffffff; border-color:#cbd5e1; border:1px solid #cbd5e1; border-left:4px solid var(--primary);">
+        <h4 style="margin-top:0; color:var(--primary); font-size:1.1rem;">ทำไมงานวิจัยนี้จึงมีโอกาส Accept สูงที่สุดใน Journal of Language and Social Psychology?</h4>
+        <ol style="margin:0; padding-left:1.2rem; color:#334155;">
+          <li style="margin-bottom:0.5rem;">
+            <strong>เชื่อมสะพาน 2 ศาสตร์ที่วารสารต้องการ:</strong> วารสารนี้มีภารกิจหลักในการตีพิมพ์งานที่ผสานระหว่าง <em>Social Psychology</em> (Attribution, Moral Hypocrisy, Victimhood) กับ <em>Language/Discourse</em> (Rhetorical Accounts, Linguistic Choices) ซึ่งบทความของเรามีทั้งสองมิติอย่างสมดุล
+          </li>
+          <li style="margin-bottom:0.5rem;">
+            <strong>แก้ปัญหา Methodological Trap ของจิตวิทยาดั้งเดิม:</strong> วารสารจิตวิทยาส่วนใหญ่ปฏิเสธงานวิจัยเรื่องความเห็นแก่ตัวเพราะใช้แบบสอบถาม (Self-report Survey) ซึ่งวัดพฤติกรรมจริงไม่ได้ การที่เราใช้ <em>Naturalistic Narrative Disclosures</em> เป็นหน้าต่างสังเกตพฤติกรรมจริง ถือเป็นนวัตกรรมระเบียบวิธีวิจัยที่บรรณาธิการชื่นชม
+          </li>
+          <li style="margin-bottom:0.5rem;">
+            <strong>การใช้ AI Cultural Informants อย่างมีหลักการ:</strong> การประยุกต์ใช้ Large Language Models ร่วมกับการวิเคราะห์วาทกรรมเชิงคำนวณ (NLP &amp; PLS-SEM) สอดรับกับกระแส Computational Social Science ในวารสารชั้นนำปี 2024–2026
+          </li>
+        </ol>
+      </div>
+
+      <h3 class="sub-title">กลยุทธ์การเตรียมต้นฉบับสำหรับการส่งตีพิมพ์ (Submission Readiness Checklist)</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; margin-top:1rem;">
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:1rem;">
+          <strong style="color:var(--primary);">จดหมายนำส่ง (Cover Letter):</strong>
+          <p style="font-size:0.88rem; color:#64748b; margin:0.4rem 0 0 0;">
+            ระบุชื่อบรรณาธิการ <strong>Prof. Nicholas A. Palomares</strong> อย่างถูกต้อง พร้อมชูจุดเด่นเรื่อง Discursive Accounting และ Big Data Naturalistic Corpus ดูตัวอย่างใน <a href="journal/cover-letter.pdf">journal/cover-letter.pdf</a>
+          </p>
+        </div>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:1rem;">
+          <strong style="color:var(--accent-purple);">คำสำคัญ (Keywords Matching):</strong>
+          <p style="font-size:0.88rem; color:#64748b; margin:0.4rem 0 0 0;">
+            บรรจุคำสำคัญที่ตรงกับ Aims &amp; Scope: <em>Discursive Psychology, Self-Serving Attribution, Virtuous Victimhood Signaling, Moral Hypocrisy, Interpersonal Communication</em>
+          </p>
+        </div>
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:1rem;">
+          <strong style="color:var(--accent-emerald);">การอ้างอิงวรรณกรรม (Citation Anchor):</strong>
+          <p style="font-size:0.88rem; color:#64748b; margin:0.4rem 0 0 0;">
+            อ้างอิงงานสัมมนาสำคัญของสายจิตวิทยาวาทกรรม (Edwards &amp; Potter, 1992; Scott &amp; Lyman, 1968) ร่วมกับงาน Q1 ล่าสุดปี 2022–2026 ในบทที่ 2
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

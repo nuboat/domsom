@@ -1,0 +1,25 @@
+# Keep downloaded PDFs out of version control per AGENTS.md §2.7
+literature/pdfs/*.pdf
+literature/*.pdf
+literature/*/*.pdf
+.idea/
+.agents/
+.claude/
+data/
+AGENTS.md
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+journal/*.log
+irb/*.log
+*.zip
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+
+# macOS
+.DS_Store

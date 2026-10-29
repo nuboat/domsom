@@ -1,0 +1,2 @@
+OpenAlex License & Terms Notification (Recorded: 2026-10-18T16:18:00+07:00)
+Please review the OpenAlex terms of service at https://developers.openalex.org/ and always verify the individual license (e.g., CC-BY, CC-BY-NC-ND, publisher open access terms) of any papers retrieved via OpenAlex for reuse or redistribution restrictions.

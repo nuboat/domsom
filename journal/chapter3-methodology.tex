@@ -1,0 +1,86 @@
+\section{Research Methodology}
+\label{sec:methodology}
+
+\subsection{Methodological Architecture and Empirical Strategy}
+To overcome the severe social desirability bias that invalidates self-reported surveys on relationship misconduct, this study employs a triangulated computational mixed-methods architecture. As depicted in Figure \ref{fig:method_pipeline}, the empirical workflow integrates: (1) large-scale naturalistic web-scraping of public relationship dispute narratives, treating online forums strictly as an unobtrusive observational window into real-world interpersonal dynamics, (2) transformer-based Natural Language Processing (NLP) for construct extraction and semantic distance modeling, (3) a multi-model Large Language Model (LLM) ``cultural informant'' interview pipeline, and (4) structural equation modeling (PLS-SEM) to empirically test hypotheses $H_1$--$H_4$.
+
+\begin{figure}[htbp]
+\centering
+\fbox{
+\begin{minipage}{0.95\textwidth}
+\small
+\textbf{Observational Data Layer:} Public Relationship Adjudication Archives (Reddit $r/\text{AmItheAsshole}$, $r/\text{relationship\_advice}$, $r/\text{marriage}$, $r/\text{family\_issues}$) $\rightarrow$ Cleaned Relationship Corpus ($N = 142,580$ naturalistic relationship dispute narratives)\\[1ex]
+\textbf{NLP Feature Layer:} SBERT Semantic Embeddings + Fine-Tuned RoBERTa Classifiers $\rightarrow$ Latent Construct Scoring ($EVP, VVS, SSA, EIR$)\\[1ex]
+\textbf{AI Informant Layer:} Multi-Model LLM Sociological Interview Engine (GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro) $\rightarrow$ Dissonance Decoding ($CDD$)\\[1ex]
+\textbf{Structural Equation Layer:} Partial Least Squares Structural Equation Modeling (PLS-SEM) + Multi-Group Analysis (MGA) across Relationship Types
+\end{minipage}
+}
+\caption{Triangulated Computational Research Architecture for Interpersonal Behavioral Analysis.}
+\label{fig:method_pipeline}
+\end{figure}
+
+\subsection{Corpus Construction: Online Repositories as Observational Windows into Real-World Relationships}
+We scraped public, naturalistic first-person relationship conflict narratives posted between January 2022 and September 2026. The sampling targeted online communities where individuals voluntarily disclose, debate, and seek third-party adjudication for authentic, real-life interpersonal and domestic disputes:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Romantic and Domestic Adjudication Communities:} Reddit's \textit{r/AmItheAsshole} and \textit{r/relationship\_advice} ($n = 88,420$), which contain rich, highly detailed chronological accounts of romantic partnerships, cohabitation dilemmas, division of labor disputes, and interpersonal conflicts.
+    \item \textbf{Marital and Domestic Dispute Forums:} Specialized communities dedicated to long-term commitments and family dynamics (\textit{r/marriage}, \textit{r/family\_issues}, and associated domestic dispute archives; $n = 54,160$), capturing deep-seated relational crises, financial disputes, and chronic emotional labor imbalances.
+\end{enumerate}
+
+\subsubsection{Data Sanitization and Ethical Safeguards}
+All scraping and data curation adhered strictly to the Association of Internet Researchers (AoIR) ethical guidelines and institutional IRB exemption standards for non-interventional public corpora (`irb/`). Personal Identifiable Information (PII)—including partner names, specific geographic locations, and platform usernames—was stripped at ingestion. Author accounts were transformed into salted SHA-256 cryptographic hashes. Posts with fewer than 50 words, bot-generated submissions, and promotional spam were purged, yielding a finalized, cleaned dataset of $N = 142,580$ distinct real-world relationship dispute narratives.
+
+\subsection{Construct Operationalization and NLP Measurement Pipeline}
+To map unstructured relationship narratives to theoretical constructs, we developed a validated NLP feature-extraction pipeline:
+
+\subsubsection{1. Egalitarian Vocabulary \& Parity Demands (\textit{EVP})}
+To capture the frequency and centrality of vocal demands for fairness and progressive relationship ideals, we constructed a specialized lexicon of 120 validated egalitarian relationship markers (e.g., ``equal partnership,'' ``fair share,'' ``emotional labor,'' ``unconscious bias,'' ``weaponized incompetence,'' ``mutual respect''). Using Sentence-BERT (\texttt{all-mpnet-base-v2}), we calculated the cosine similarity between each narrative's vector embedding and a reference semantic centroid representing egalitarian relational advocacy. The composite \textit{EVP} score integrates normalized keyword frequency with dense semantic alignment.
+
+\subsubsection{2. Virtuous Victimhood Signaling (\textit{VVS})}
+Operationalized following the psychometric dimensions established by \citet{ok2021signaling} and extended by \citet{bates2024virtuous}. We fine-tuned a RoBERTa-large classifier on a manually annotated validation set of 3,000 relationship narratives coded for dual indicators: (a) broadcasting personal disadvantage, chronic emotional fatigue, or past psychological trauma, and (b) asserting inherent moral rectitude, empathy superiority, and pure relational motives. The fine-tuned classifier achieved an out-of-sample Macro $F1$ score of 0.884.
+
+\subsubsection{3. Self-Serving Attribution \& Licensing (\textit{SSA})}
+Capturing the cognitive mechanisms through which actors balance selfish transgressions against prior moral credentials and externalize blame onto their partners \citep{krettenauer2022when,fritz2025putting}. Text was classified using an ensemble transformer trained to identify Heider's (1958) and Bandura's (1999) attributional maneuvers:
+\begin{itemize}[leftmargin=*]
+    \item \textit{Moral Credit Compensation:} Invoking past emotional support or progressive advocacy to excuse selfish conduct (e.g., ``Given how supportive I've been of their career, they have no right to complain about...'').
+    \item \textit{Condemning the Partner:} Disproportionately magnifying the partner's flaws or perceived privileges to justify one's own unilateral withdrawal of effort (e.g., ``They come from a privileged background, so they should handle the domestic burden'').
+    \item \textit{Trauma-Based Duty Exemption:} Claiming that personal emotional sensitivity or past relationship wounds exempt the actor from reciprocal responsibilities.
+\end{itemize}
+
+\subsubsection{4. Exploitative Interpersonal Relationship Behaviors (\textit{EIR})}
+Unlike subjective self-reports, \textit{EIR} was operationalized using objective, documented behavioral outcomes described within the relationship dispute narratives:
+\begin{enumerate}[leftmargin=*]
+    \item \textit{Domestic and Emotional Asymmetry:} Complete shifting of domestic labor, refusal of reciprocal emotional care during partner distress, or unilateral financial parasitism.
+    \item \textit{Relational Manipulation and Punitive Sanctions:} Unilateral stonewalling, weaponizing progressive terminology to gaslight the partner, or mobilizing social networks/family to publicly ostracize the partner over routine disagreements.
+\end{enumerate}
+Narratives were coded continuously for severity of exploitation using a supervised classifier cross-validated against a gold-standard subset of 2,500 human-annotated relationship cases (Inter-coder Cohen's $\kappa = 0.892$).
+
+\subsection{Large Language Models as Cultural Informants Protocol}
+Building upon \citet{ziems2024large}, \citet{argyle2023out}, and \citet{grossmann2024generative}, we deployed a multi-model Large Language Model interview engine to serve as qualitative ``cultural informants'' on human relational dynamics.
+
+\subsubsection{Informant Sampling and Elicitation Protocol}
+We selected three leading frontier model families:
+\begin{enumerate}
+    \item \textbf{OpenAI GPT-4o} (Checkpoint: \texttt{gpt-4o-2024-08-06})
+    \item \textbf{Anthropic Claude 3.5 Sonnet} (Checkpoint: \texttt{claude-3-5-sonnet-20241022})
+    \item \textbf{Google Gemini 1.5 Pro} (Checkpoint: \texttt{gemini-1.5-pro-002})
+\end{enumerate}
+All models operated under strictly controlled conditions: decoding temperature $T = 0.10$, top-$p = 0.95$, and zero-shot standardized system prompts.
+
+\subsubsection{Structured Informant Interview Prompts}
+Each model was presented with a stratified sample of 5,000 anonymized real-world relationship dispute vignettes spanning low, medium, and high \textit{EVP} scores:
+\begin{quote}
+\small
+\textit{``You are an expert interpersonal psychologist and relationship counselor acting as an objective cultural informant. Analyze the attached anonymized real-world relationship conflict narrative. Evaluate: (1) The presence and rhetorical function of egalitarian/fairness vocabulary, (2) The degree of latent dissonance between stated egalitarian values and enacted partner exploitation, (3) The specific self-serving attribution mechanism deployed by the narrator, and (4) Output a Cognitive Dissonance Decoding score (\textit{CDD}) on a scale of 0.00 to 1.00 alongside structured clinical reasoning.''}
+\end{quote}
+Outputs from the three models were parsed into structured JSON schemas, yielding an aggregated multi-agent consensus metric of relational hypocrisy and manipulative framing.
+
+\subsection{Statistical Protocol and Measurement Hardening}
+The structured dataset of NLP construct scores ($N = 142,580$) was analyzed using Partial Least Squares Structural Equation Modeling (PLS-SEM) in \texttt{SmartPLS 4} and the \texttt{cSEM} package in R. PLS-SEM was chosen due to its robustness in handling complex mediated-moderation structural models involving non-normal continuous text distributions derived from big data \citep{cerulli2026dark}.
+
+To establish construct validity:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Convergent Validity:} Evaluated through indicator loadings ($> 0.70$) and Average Variance Extracted ($AVE > 0.50$).
+    \item \textbf{Internal Consistency:} Evaluated via Composite Reliability ($CR > 0.80$) and Cronbach's $\alpha (> 0.75)$.
+    \item \textbf{Discriminant Validity:} Assessed using the conservative Heterotrait-Monotrait ratio of correlations ($HTMT < 0.85$).
+    \item \textbf{Common Method Bias (CMB):} Assessed via Kock's full collinearity test; all construct Variance Inflation Factors (VIFs) were required to remain below the 3.3 ceiling.
+\end{itemize}
