@@ -118,7 +118,7 @@ analysis/
   run_moderated_mediation.py             Hayes' PROCESS Model 7 & Cross-Cultural MGA path modeling
   data/thai_pantip_disputes_curated.csv  Curated Study 2 Thai dataset with crowd moral verdicts
 journal/
-  journal.tex                            Master LaTeX manuscript (19 pages, pdflatex + bibtex verified)
+  journal.tex                            Master LaTeX manuscript (18 pages, pdflatex + bibtex verified)
   chapter1-introduction.tex              Chapter 1: Funnel Problematization & WEP Conceptualization
   chapter2-literature-review.tex         Chapter 2: Accounts Theory, Thematic Review & Synthesis Matrix
   chapter3-methodology.tex               Chapter 3: Two-Study Design, Split-Source Measurement & LLM Validation
@@ -126,6 +126,8 @@ journal/
   chapter5-discussion.tex                Chapter 5: Theoretical Contributions, Clinical Implications & Limitations
   gap-memo.tex                           Research Scope & Pre-Mortem Memorandum
   cover-letter.tex                       Editor Cover Letter to target journal
+  supplementary.tex                      Online Supplementary Material (Appendices S1-S5: Codebook, LLM, MICOM, Vignettes)
+  supplementary.pdf                      Compiled Online Supplementary Material package (8 pages)
   journal.pdf                            Compiled submission-grade manuscript
 journal_thai.html                        Full Thai HTML review interface on root directory
 conceptual-model.html                    Standalone SVG vector poster for the structural model

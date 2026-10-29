@@ -2,13 +2,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{booktabs}
+\usepackage{amsmath}
 \usepackage{xcolor}
 \usepackage{hyperref}
 
 \hypersetup{colorlinks=true, linkcolor=blue!70!black, urlcolor=blue!70!black}
 
 \title{\textbf{\Large Institutional Review Board (IRB) Ethics Package \& Exemption Protocol}\\[1ex]
-\large Human Research Ethics and AI Cultural Informant Compliance}
+\large Human Research Ethics and AI Computational Annotation Compliance}
 \author{\textbf{Principal Investigator \& Center for Computational Social Science}}
 \date{October 29, 2026}
 
@@ -17,29 +18,31 @@
 
 \section{Project Metadata \& Classification}
 \begin{itemize}
-    \item \textbf{Protocol Title:} The Hypocrisy of Parity: Synthesizing AI Perspectives and Big Data to Map Weaponized Social Justice
+    \item \textbf{Protocol Title:} Weaponized Egalitarian Posturing: Discursive Rationalization and Exploitative Interpersonal Relations across Western and Thai Conflict Narratives
     \item \textbf{Principal Investigator (PI):} Research Team, Center for Computational Social Science
     \item \textbf{Review Category Requested:} \textbf{Exempt Review} under 45 CFR 46.104(d)(4) (Secondary research uses of publicly available, non-interventional digital records).
-    \item \textbf{Targeted Funding / Data Window:} January 2022 -- September 2026.
+    \item \textbf{Targeted Data Window:} January 2022 -- September 2026.
+    \item \textbf{Sample Scope \& Repositories:} Two-Study Cross-Cultural Design ($N = 14,250$ total naturalistic dispute cases): Study 1 English Reddit $r/\text{AmItheAsshole}$ ($N = 10,000$) and Study 2 Thai Pantip relationship dispute threads ($N = 4,250$).
 \end{itemize}
 
 \section{Protocol Summary \& Ethical Framework}
-This study investigates the latent sociolinguistic and behavioral dynamics between public egalitarian virtue signaling and private extractive micro-actions. The investigation relies exclusively on observational text corpora scraped from public online discussion repositories (Reddit public threads) and transaction dispute threads. No interventional experiments, deceptive interactions, or direct participant recruitment are conducted with human subjects.
+This study investigates how individuals deploy egalitarian parity vocabulary as an offensive interpersonal lever (Weaponized Egalitarian Posturing; $WEP$) paired with intellectualized situational justifications (Legitimized Rational Accounts; $LRA$ --- ``I have my reasons'' / Thai: \textit{``rao mee het-phon na''}) to license exploitative interpersonal relations ($EIR$) through self-serving attribution ($SSA$). The investigation relies exclusively on observational text corpora curated from public online discussion repositories. No interventional experiments, deceptive interactions, or direct participant recruitment are conducted with human subjects.
 
 \section{Data Governance, Privacy, and De-Identification Protocol}
 In full compliance with the Association of Internet Researchers (AoIR) Ethics Guidelines 3.0 and national data protection laws (PDPA / GDPR):
 \begin{enumerate}
-    \item \textbf{Zero Re-Identifiability:} All user account handles, author usernames, timestamps with microsecond precision, and location references are irreversibly stripped at the ingestion pipeline. User identifiers are transformed into salted SHA-256 cryptographic hashes.
+    \item \textbf{Zero Re-Identifiability:} All user account handles, author usernames, microsecond timestamps, and identifiable personal references are irreversibly stripped at the ingestion pipeline. Identifiers are transformed into salted SHA-256 cryptographic hashes.
     \item \textbf{Quotation Paraphrasing Standard:} In academic manuscript drafts, direct user quotes that could allow reverse-search indexing via commercial search engines are structurally paraphrased or synthesized into composite vignettes, preventing re-identification of original authors.
-    \item \textbf{Secure Storage \& Access Control:} Raw corpus files are stored in an encrypted disk volume (`analysis/`) with access restricted strictly to certified project researchers. No raw or identifiable text data is tracked under public version control.
+    \item \textbf{Secure Storage \& Access Control:} Raw corpus files are stored in an encrypted disk volume (\texttt{analysis/}) with access restricted strictly to certified project researchers. No raw or identifiable participant text data is tracked under public version control.
 \end{enumerate}
 
-\section{Ethics of Large Language Models as Cultural Informants}
-The deployment of Large Language Models (LLMs) as sociological cultural informants adheres to emerging computational social science standards:
+\section{Ethics of Computational LLM Annotation \& Split-Source Validation}
+The deployment of Large Language Models (LLMs) for psychometric narrative scoring adheres to emerging computational social science standards and research ethics:
 \begin{itemize}
-    \item \textbf{Synthetic Informants, Not Human Proxies:} LLMs are prompted strictly as analytical and cultural informants reflecting synthesized social priors, rather than being passed off as human study participants.
-    \item \textbf{Algorithmic Bias Safeguards:} Prompts are neutral, standardized, and audited across three independent model providers (OpenAI, Anthropic, Google) to ensure conclusions do not reflect a single proprietary corporate alignment filter.
-    \item \textbf{Transparency \& Disclosure:} All prompts, model versions (checkpoints), and temperature settings are recorded in \texttt{irb/AI\_USE\_LOG.md} in accordance with ICMJE and COPE authorship ethics.
+    \item \textbf{Computational Measurement, Not Human Proxies:} LLMs are prompted strictly as standardized psychometric rating engines operating under a predefined 1--7 Likert codebook, rather than being passed off as human study participants.
+    \item \textbf{Decoding Parameter Control:} LLM decoders operate under strictly controlled deterministic parameters (\texttt{Temperature = 0.10}) across multi-model ensembles (GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro) to ensure deterministic scoring reproducibility and minimize hallucination.
+    \item \textbf{Split-Source \& Ground-Truth Triangulation:} To prevent single-source algorithmic bias, narrator internal discursive constructs ($WEP, LRA, SSA$) are evaluated from the first-person dispute text, while behavioral exploitation outcomes ($EIR$) are directly triangulated with authentic crowd-sourced moral verdicts (\texttt{YTA} vs \texttt{NTA} community consensus), ensuring unassailable empirical grounding without synthetic human expert fabrication.
+    \item \textbf{Transparency \& Disclosure:} All prompts, model checkpoints, and temperature settings are recorded in \texttt{irb/AI\_USE\_LOG.md} in accordance with ICMJE and COPE authorship and ethics guidelines.
 \end{itemize}
 
 \section{Risk Assessment and Investigator Assurances}

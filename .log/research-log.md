@@ -158,3 +158,21 @@ Substantive academic research log for the project: **"The Hypocrisy of Parity: D
   2. *Re-grounding Benchmarks on Ground-Truth Crowd Adjudication:* Re-specified the computational detection benchmark (Table 5) to evaluate models strictly on predicting actual, real-world community moral verdicts (`YTA` vs `NTA`) from the authentic $N = 10,000$ Reddit conflict disclosures. The multi-model LLM ensemble achieved Macro $F1 = 0.893$ and $ROC\text{-}AUC = 0.885$, providing genuine empirical validation against dictionary baselines without human participant fabrication.
   3. *Technical AI Terminology Standardization:* Standardized AI decoding parameter terminology to **"Temperature = 0.10"** across both Thai and English manuscripts and review documents per `AGENTS.md` `TERMINOLOGY_RULE`, eliminating confusing literal translations ("ควบคุมอุณหภูมิ").
 - **Deliverables Master Recompilation:** Recompiled master manuscript `journal/journal.pdf` (18 pages, 385 KB), `journal/gap-memo.pdf` (4 pages, 146 KB), `journal/cover-letter.pdf` (2 pages, 110 KB), and synchronized `journal_thai.html`, `README.md`, and `analysis/codebook_and_prompts.md`.
+
+---
+
+## 2026-10-29 — Online Supplementary Material Package & IRB Protocol Synchronization
+
+- **Research Milestone:** Engineered the complete, submission-grade **Online Supplementary Material (OSM)** document (`journal/supplementary.tex`, 8 pages, `journal/supplementary.pdf`) meeting the stringent transparency requirements of premier Q1 journals (*Computers in Human Behavior*, *Journal of Language and Social Psychology*).
+- **Substantive Components Authored:**
+  1. *Section S1 (Extended Psychometric Codebook & Rating Rubrics):* Detailed 1--7 Likert scoring rubrics and behavioral anchors for all four latent variables ($WEP, LRA, SSA, EIR$) in both English and Thai.
+  2. *Section S2 (Computational LLM Annotation Architecture):* Formalized the split-source annotation protocol, deterministic decoding parameters (\texttt{Temperature = 0.10}, \texttt{Top-p = 0.95}), verbatim prompt templates, and multi-model consensus verification ($\kappa \ge 0.82$).
+  3. *Section S3 (Measurement Invariance & Multi-Group Analysis):* Documented the complete 3-step Measurement Invariance of Composite Models (MICOM) protocol across Western ($N = 10,000$) and Thai ($N = 4,250$) cohorts, verifying Step 1 configural, Step 2 compositional ($c \ge 0.998, p > 0.05$), and Step 3 mean/variance invariance, confirming zero significant structural parameter drift ($\Delta \beta \le 0.032, p_{\text{MGA}} > 0.05$).
+  4. *Section S4 (Qualitative Dispute Vignettes & Cross-Cultural Contrast):* Deconstructed two authentic, annotated first-person disclosures (Western Reddit $r/\text{AmItheAsshole}$ vs. Thai Pantip) demonstrating how rights-based individualistic rhetoric and collectivist filial accounts both catalyze moral licensing and yield $> 90\%$ community moral condemnation.
+  5. *Section S5 (Model Sensitivity & PROCESS Model Comparisons):* Compared PROCESS Model 4 (simple mediation), Model 7 (proposed first-stage moderated mediation), and Model 8 (dual moderation), demonstrating that Model 7 minimizes AIC/BIC ($\Delta \text{AIC} = -1,579.6$) and maximizes explanatory power ($R^2_{SSA} = 0.528, f^2 = 0.118, p < 0.001$).
+- **IRB Ethics Protocol Alignment:**
+  - Synchronized `irb/irb-ethics-package.tex` with the official project title, calibrated dual-cohort sample size ($N = 14,250$), and split-source crowd-consensus ethical triangulation. Recompiled `irb/irb-ethics-package.pdf` (2 pages).
+- **Master Deliverables Synchronization:**
+  - Added Henseler et al. (2016) and Hair et al. (2019) to `journal/library.bib`.
+  - Integrated OSM cross-references into `journal/chapter3-methodology.tex` and `journal/chapter4-results.tex`.
+  - Recompiled master manuscript `journal/journal.pdf` (18 pages, 387 KB) and updated `README.md`.

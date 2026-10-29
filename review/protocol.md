@@ -1,6 +1,6 @@
 # Systematic Literature Review Protocol (`review/protocol.md`)
 
-**Project Title:** The Hypocrisy of Parity: Synthesizing AI Perspectives and Big Data to Map Weaponized Social Justice  
+**Project Title:** Weaponized Egalitarian Posturing: Discursive Rationalization and Exploitative Interpersonal Relations across Western and Thai Conflict Narratives  
 **Protocol Version:** 1.0 (2026-10-29)  
 **Standard:** PRISMA 2020 / PRISMA-S Guidelines (Page et al., 2021)  
 **Corpus Rules:** Peer-reviewed Q1 journal articles only (2022–2026 for post-Introduction chapters; seminal foundations admitted in Chapter 1)
