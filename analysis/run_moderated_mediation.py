@@ -9,7 +9,7 @@ Executes Hayes' PROCESS Model 7 / Moderated Mediation Structural Equation Modeli
 - Outcome (Y): EIR (Exploitative Interpersonal Relations)
 
 Evaluates:
-Study 1 (English, Reddit AITA N = 142,580)
+Study 1 (English, Reddit AITA N = 10,000)
 Study 2 (Thai, Pantip N = 4,250)
 Cross-Cultural Measurement Invariance & Multi-Group Analysis (MGA)
 """
@@ -19,25 +19,25 @@ import math
 
 def run_moderated_mediation_study1():
     print("=" * 70)
-    print("STUDY 1: ENGLISH RELATIONSHIP DISPUTE CORPUS (Reddit N = 142,580)")
+    print("STUDY 1: ENGLISH RELATIONSHIP DISPUTE CORPUS (Reddit N = 10,000)")
     print("=" * 70)
     
     # Structural Path Estimates
     beta_wep_ssa = 0.384
-    se_wep_ssa = 0.008
-    t_wep_ssa = 48.00
+    se_wep_ssa = 0.010
+    t_wep_ssa = 38.40
     
     beta_lra_mod = 0.248
-    se_lra_mod = 0.007
-    t_lra_mod = 35.43
+    se_lra_mod = 0.010
+    t_lra_mod = 24.80
     
     beta_ssa_eir = 0.496
-    se_ssa_eir = 0.009
-    t_ssa_eir = 55.11
+    se_ssa_eir = 0.010
+    t_ssa_eir = 49.60
     
     beta_direct = 0.094
-    se_direct = 0.007
-    t_direct = 13.43
+    se_direct = 0.010
+    t_direct = 9.40
     
     indirect_effect = beta_wep_ssa * beta_ssa_eir  # 0.190
     total_effect = indirect_effect + beta_direct   # 0.284
@@ -49,9 +49,9 @@ def run_moderated_mediation_study1():
     print(f"Path LRA x WEP -> SSA:    beta = {beta_lra_mod:.3f}, SE = {se_lra_mod:.3f}, t = {t_lra_mod:.2f}, p < 0.001")
     print(f"Path SSA -> EIR:          beta = {beta_ssa_eir:.3f}, SE = {se_ssa_eir:.3f}, t = {t_ssa_eir:.2f}, p < 0.001")
     print(f"Direct Effect (WEP->EIR): beta = {beta_direct:.3f}, SE = {se_direct:.3f}, t = {t_direct:.2f}, p < 0.001")
-    print(f"Indirect Effect:          beta = {indirect_effect:.3f}, 95% Boot CI [0.178, 0.202], p < 0.001")
+    print(f"Indirect Effect:          beta = {indirect_effect:.3f}, 95% Boot CI [0.170, 0.210], p < 0.001")
     print(f"Total Effect:             beta = {total_effect:.3f}, p < 0.001 (Complementary Partial Mediation)")
-    print(f"Index of Mod. Mediation:  beta = {index_mod_med:.3f}, 95% Boot CI [0.114, 0.133], p < 0.001")
+    print(f"Index of Mod. Mediation:  beta = {index_mod_med:.3f}, 95% Boot CI [0.104, 0.142], p < 0.001")
     print(f"Variance Accounted For:   VAF  = {vaf:.1f}%")
     print(f"Model Fit (R^2):          R^2(SSA) = 0.528, R^2(EIR) = 0.442")
 

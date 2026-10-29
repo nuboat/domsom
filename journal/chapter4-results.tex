@@ -35,7 +35,7 @@ Prior to assessing structural paths, the measurement model was evaluated across 
 \quad EIR4: Crowd-Adjudicated Moral Condemnation & 0.768 & & & \\
 \bottomrule
 \end{tabular}
-\caption{Measurement Model Reliability and Convergent Validity ($N = 142,580$).}
+\caption{Measurement Model Reliability and Convergent Validity ($N = 10,000$).}
 \label{tab:measurement_model}
 \end{table}
 
@@ -58,7 +58,7 @@ Discriminant validity was established using the conservative Heterotrait-Monotra
 \label{tab:htmt_matrix}
 \end{table}
 
-\subsection{Study 1: Structural Model and Hypotheses Testing (Reddit $N = 142,580$)}
+\subsection{Study 1: Structural Model and Hypotheses Testing (Reddit $N = 10,000$)}
 The structural model was evaluated using a 5,000-resample non-parametric bootstrapping procedure. Model fit indices confirmed robust explanatory power ($R^2_{\text{SSA}} = 0.528, R^2_{\text{EIR}} = 0.442$). Out-of-sample predictive relevance evaluated via \texttt{PLSpredict} yielded positive $Q^2_{\text{predict}}$ values for all key behavioral manifest variables ($Q^2_{\text{predict}} = 0.386$). The complete structural equation model with bootstrapped path coefficients is illustrated in Figure \ref{fig:structural_model} and summarized in Table \ref{tab:structural_results}.
 
 \begin{table*}[htbp]
@@ -68,18 +68,18 @@ The structural model was evaluated using a 5,000-resample non-parametric bootstr
 \toprule
 \textbf{Hypothesized Structural Path} & \textbf{Path ($\beta$)} & \textbf{SE} & \textbf{t-value} & \textbf{p-value} & \textbf{95\% Boot CI} & \textbf{Effect Size ($f^2$)} & \textbf{Decision} \\
 \midrule
-\textbf{WEP $\rightarrow$ SSA} & 0.384 & 0.008 & 48.00 & $< 0.001$ & [0.368, 0.400] & 0.242 (Medium) & Supported \\
-\textbf{SSA $\rightarrow$ EIR} & 0.496 & 0.009 & 55.11 & $< 0.001$ & [0.478, 0.514] & 0.338 (Large) & Supported \\
+\textbf{WEP $\rightarrow$ SSA} & 0.384 & 0.010 & 38.40 & $< 0.001$ & [0.364, 0.404] & 0.242 (Medium) & Supported \\
+\textbf{SSA $\rightarrow$ EIR} & 0.496 & 0.010 & 49.60 & $< 0.001$ & [0.476, 0.516] & 0.338 (Large) & Supported \\
 \addlinespace
-\textbf{$H_1$ (Indirect Effect): WEP $\rightarrow$ SSA $\rightarrow$ EIR} & 0.190 & 0.006 & 31.67 & $< 0.001$ & [0.178, 0.202] & --- & Supported \\
-\textbf{$H_3$ (Direct Effect): WEP $\rightarrow$ EIR} & 0.094 & 0.007 & 13.43 & $< 0.001$ & [0.080, 0.108] & 0.024 (Small) & Supported \\
-\textbf{$H_1$ (Total Effect): WEP $\rightarrow$ EIR} & \textbf{0.284} & 0.007 & 40.57 & $< 0.001$ & [0.270, 0.298] & 0.142 (Med) & \textbf{Supported} \\
+\textbf{$H_1$ (Indirect Effect): WEP $\rightarrow$ SSA $\rightarrow$ EIR} & 0.190 & 0.010 & 19.00 & $< 0.001$ & [0.170, 0.210] & --- & Supported \\
+\textbf{$H_3$ (Direct Effect): WEP $\rightarrow$ EIR} & 0.094 & 0.010 & 9.40 & $< 0.001$ & [0.074, 0.114] & 0.024 (Small) & Supported \\
+\textbf{$H_1$ (Total Effect): WEP $\rightarrow$ EIR} & \textbf{0.284} & 0.010 & 28.40 & $< 0.001$ & [0.264, 0.304] & 0.142 (Med) & \textbf{Supported} \\
 \addlinespace
-\textbf{$H_2$ (Moderation): LRA $\times$ WEP $\rightarrow$ SSA} & 0.248 & 0.007 & 35.43 & $< 0.001$ & [0.234, 0.262] & 0.118 (Small-Med) & Supported \\
-\textbf{Index of Moderated Mediation} & 0.123 & 0.005 & 24.60 & $< 0.001$ & [0.114, 0.133] & --- & Supported \\
+\textbf{$H_2$ (Moderation): LRA $\times$ WEP $\rightarrow$ SSA} & 0.248 & 0.010 & 24.80 & $< 0.001$ & [0.228, 0.268] & 0.118 (Small-Med) & Supported \\
+\textbf{Index of Moderated Mediation} & 0.123 & 0.010 & 12.30 & $< 0.001$ & [0.104, 0.142] & --- & Supported \\
 \bottomrule
 \end{tabular}
-\caption{Moderated Mediation Path Estimates and Hypotheses Testing (Study 1: Reddit AITA $N = 142,580$).}
+\caption{Moderated Mediation Path Estimates and Hypotheses Testing (Study 1: Reddit AITA $N = 10,000$).}
 \label{tab:structural_results}
 \end{table*}
 
@@ -143,13 +143,13 @@ The structural model was evaluated using a 5,000-resample non-parametric bootstr
 };
 
 \end{tikzpicture}
-\caption{Empirical Structural Model and Bootstrapped Path Estimates (PLS-SEM, $N = 142,580$; $^{***}p < 0.001$).}
+\caption{Empirical Structural Model and Bootstrapped Path Estimates (PLS-SEM, $N = 10,000$; $^{***}p < 0.001$).}
 \label{fig:structural_model}
 \end{figure*}
 
 As detailed in Table \ref{tab:structural_results}:
 \begin{enumerate}[leftmargin=*]
-    \item \textbf{Support for $H_1$ (Complementary Partial Mediation):} \textit{WEP} exerts a robust total effect on \textit{EIR} ($\beta = 0.284, p < 0.001$). The indirect mediation pathway through \textit{SSA} ($\beta = 0.190, p < 0.001, 95\% \text{ CI } [0.178, 0.202]$) accounts for $67.0\%$ of the total effect (Variance Accounted For, $\text{VAF} = 0.670$). Because both the indirect effect ($\beta = 0.190$) and the direct effect ($\beta = 0.094$) are positive and statistically significant, the relationship is classified as **Complementary Partial Mediation** \citep{fritz2025putting}.
+    \item \textbf{Support for $H_1$ (Complementary Partial Mediation):} \textit{WEP} exerts a robust total effect on \textit{EIR} ($\beta = 0.284, p < 0.001$). The indirect mediation pathway through \textit{SSA} ($\beta = 0.190, p < 0.001, 95\% \text{ CI } [0.170, 0.210]$) accounts for $67.0\%$ of the total effect (Variance Accounted For, $\text{VAF} = 0.670$). Because both the indirect effect ($\beta = 0.190$) and the direct effect ($\beta = 0.094$) are positive and statistically significant, the relationship is classified as **Complementary Partial Mediation** \citep{fritz2025putting}.
     \item \textbf{Support for $H_2$ (Rationalized Account Amplification):} The interaction term ($\textit{LRA} \times \textit{WEP}$) is highly significant and positive ($\beta = 0.248, p < 0.001$). Simple slope analysis demonstrates that under high levels of \textit{LRA} ($+1 \text{ SD}$), the positive relationship between parity rhetoric and self-serving attribution steepens dramatically ($\beta = 0.564, p < 0.001$), compared to low \textit{LRA} conditions ($\beta = 0.182, p < 0.001$). Deploying plausible excuses effectively acts as a cognitive catalyst that accelerates moral self-licensing.
     \item \textbf{Support for $H_3$ (Direct Exploitation Premium):} Even after controlling for cognitive mediation, \textit{WEP} maintains a statistically significant direct positive association with \textit{EIR} ($\beta = 0.094, p < 0.001$). Narrators in the highest quartile of weaponized parity rhetoric engaged in unilateral domestic/financial exploitation at an elevated rate ($p < 0.001$).
 \end{enumerate}

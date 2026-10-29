@@ -16,7 +16,7 @@ PRIMARY_FIELD: "Social Psychology & Discursive Psychology / Interpersonal Commun
 DISCIPLINARY_INTERSECTION: "Discursive Psychology, Interpersonal Communication, Moral Licensing, Accounts Theory, Attribution Theory, Cross-Cultural Computational Linguistics"
 CORE_ONTOLOGICAL_FOCUS: "Real-world interpersonal treatment of others across romantic, domestic, familial, and peer relationships"
 CORE_PARADOX_FRAME: "How 'Weaponized Egalitarian Posturing' (WEP) paired with Legitimized Rational Accounts (LRA: 'I Have My Reasons' / 'เรามีเหตุผลนะ') licenses interpersonal exploitation without guilt"
-STUDY_DESIGN: "Two-Study Cross-Cultural Design: Study 1 (Reddit AITA English, N = 142,580) + Study 2 (Pantip Thai, N = 4,250)"
+STUDY_DESIGN: "Two-Study Cross-Cultural Design: Study 1 (Reddit AITA English, N = 10,000) + Study 2 (Pantip Thai, N = 4,250), Total N = 14,250"
 DATA_SOURCE_ROLE: "First-person moral judgment seeking narratives on public dispute forums (r/AmItheAsshole and Pantip) function as an unobtrusive observational window into authentic interpersonal accounts, bypassing self-report social desirability bias"
 SPLIT_SOURCE_VALIDATION: "Split-Source & Crowd-Consensus Validation: Narrator's internal discursive constructs (WEP, LRA, SSA) extracted from text; behavioral exploitation outcome (EIR) triangulated with crowd-sourced moral verdicts (YTA/NTA, community accountability votes)"
 BILINGUAL_VALIDATION: "Human-Validated Bilingual LLM Annotation (Krippendorff's alpha >= 0.82 across 1,000 calibration cases)"
@@ -55,7 +55,7 @@ Crucially, when actors who champion equality fail to reciprocate, they systemati
 ### FINER Research Questions (RQs)
 1. **RQ1 (Weaponized Posturing vs. Relational Extraction):** To what extent does Weaponized Egalitarian Posturing ($WEP$) predict Exploitative Interpersonal Relations ($EIR$) across real-world relationship narratives, and how does Self-Serving Attribution ($SSA$) mediate this dynamic?
 2. **RQ2 (Rationalized Accounts as an Interpersonal Catalyst):** How do Legitimized Rational Accounts ($LRA$ — "เรามีเหตุผลนะ" / "I have my reasons") moderate the link between parity rhetoric and self-serving justifications, accelerating moral licensing and neutralizing guilt?
-3. **RQ3 (Cross-Cultural Invariance & Crowd Triangulation):** How consistently does the moderated mediation architecture replicate across individualistic (English Reddit, $N = 142,580$) and collectivist (Thai Pantip, $N = 4,250$) conflict disclosures when validated against crowd-adjudicated moral verdicts?
+3. **RQ3 (Cross-Cultural Invariance & Crowd Triangulation):** How consistently does the moderated mediation architecture replicate across individualistic (English Reddit, $N = 10,000$) and collectivist (Thai Pantip, $N = 4,250$) conflict disclosures when validated against crowd-adjudicated moral verdicts?
 
 ---
 
@@ -113,7 +113,8 @@ irb/AI_USE_LOG.md                        ICMJE/COPE AI disclosure statement & re
 analysis/
   codebook_and_prompts.md                Standard 1-7 psychometric codebook & LLM annotation prompts
   scrape_pantip_corpus.py                Study 2 Thai dispute extraction pipeline (N = 4,250)
-  download_raw_corpus.py                 Study 1 Reddit AITA raw corpus downloader (N = 142,580)
+  scrape_reddit_live.py                  Study 1 Reddit AITA data pipeline & clean sample loader (N = 10,000)
+  download_raw_corpus.py                 Study 1 Reddit AITA raw corpus downloader
   run_moderated_mediation.py             Hayes' PROCESS Model 7 & Cross-Cultural MGA path modeling
   data/thai_pantip_disputes_curated.csv  Curated Study 2 Thai dataset with crowd moral verdicts
 journal/
