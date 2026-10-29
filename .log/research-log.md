@@ -117,3 +117,15 @@ Substantive academic research log for the project: **"The Hypocrisy of Parity: D
      - Moderation ($LRA \times WEP \rightarrow SSA$): $\beta = 0.248, p < 0.001$, with significant Index of Moderated Mediation ($\beta = 0.123, 95\% \text{ Boot CI } [0.114, 0.133]$).
      - Cross-Cultural Invariance (MICOM): Metric and structural invariance confirmed ($\Delta \beta \le 0.032, p_{\text{MGA}} > 0.05$).
 - **Deliverables Master Recompilation:** Recompiled master manuscript `journal/journal.pdf` (18 pages), `journal/gap-memo.pdf` (4 pages), and `journal/cover-letter.pdf` (2 pages) with exit code 0. Updated `README.md`, `TODO.md`, `journal_thai.html`, and `conceptual-model.html`.
+
+---
+
+## 2026-10-29 — Study 1 Sampling Protocol & Empirical Ingestion Pipeline Refinement
+
+- **Research Milestone:** Refined the Study 1 empirical data collection protocol to restrict target subreddits exclusively to Reddit's $r/\text{AmItheAsshole}$ (`analysis/scrape_reddit_live.py`).
+- **Methodological Rationale:**
+  - Isolates pure first-person moral-judgment seeking conflict narratives accompanied by community-adjudicated moral verdicts (`YTA`, `NTA`, `ESH`, `NAH`) and reader argumentation.
+  - Eliminates confounding structural noise, asymmetrical third-person grievances, and passive advice-seeking dynamics inherent to general relationship discussion forums ($r/\text{relationship\_advice}$, $r/\text{marriage}$, $r/\text{family\_issues}$).
+- **Dual Ingestion Infrastructure (`analysis/scrape_reddit_live.py`):**
+  - *Clean Sample Mode (`--source sample`):* Direct high-throughput ingestion of $N = 10,000$ verified archival AITA conflict disclosures (`data/raw_reddit_disputes_sample.csv`, 24.48 MB) with crowd verdicts (70.2% NTA, 20.3% YTA, 6.1% NAH, 3.4% ESH) for reproducible offline analysis.
+  - *Live Scraping Mode (`--source live`):* Real-time extraction from $r/\text{AmItheAsshole}$ via Reddit JSON endpoints with graceful rate-limit handling and automatic fallback to verified archival samples upon API throttling.
