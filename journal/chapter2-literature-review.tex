@@ -122,23 +122,24 @@ Based on this theoretical synthesis, we advance four testable structural hypothe
 % Coordinate on WEP -> SSA path for moderation
 \coordinate (path_wep_ssa) at (3.0, 0);
 
-% 4. H1 Mediation Paths (with stacked labels for maximum clearance)
-\draw[arr] (WEP) -- (SSA) node[midway, below=5pt, lbl] {$H_1$\\[-0.2ex]$\beta = 0.384^{***}$};
-\draw[arr, draw=purple!70!black] (SSA) -- (EIR) node[midway, above=5pt, lbl] {$H_1$\\[-0.2ex]$\beta = 0.496^{***}$};
+% 4. Hypothesized Mediation Paths
+\draw[arr] (WEP) -- (SSA) node[midway, below=5pt, lbl] {$H_1 (+)$};
+\draw[arr, draw=purple!70!black] (SSA) -- (EIR) node[midway, above=5pt, lbl] {$H_1 (+)$};
 
-% H2 Moderation Path with badge centered on vertical dashed line
+% 5. Hypothesized Moderation Path
 \draw[modarr] (LRA.south) -- (path_wep_ssa);
-\node[lbl, draw=orange!60, fill=white] at (3.0, 2.3) {$H_2 \text{ (Mod): } \beta = 0.248^{***}$};
+\node[lbl, draw=orange!60, fill=white] at (3.0, 2.3) {$H_2 \text{ (Mod, } +)$};
 
-% Mediation Summary Badge
-\node[fill=blue!10, draw=blue!40, rounded corners=4pt, font=\scriptsize, align=center, inner sep=4pt] at (6.1, -2.2) {
-    \textbf{Total Effect ($H_1$):} $\beta = 0.284^{***}$ (Indirect: $\beta = 0.190^{***}$, $\text{VAF} = 67.0\%$)
+% 6. Hypothesized Structural Architecture Badge
+\node[fill=blue!10, draw=blue!40, rounded corners=4pt, font=\scriptsize, align=center, inner sep=3.5pt] at (6.1, -2.15) {
+    \textbf{Hypothesized Architecture ($H_1$):}\\[-0.2ex]
+    Complementary Partial Mediation
 };
 
-% H3 Direct Path
-\draw[dirarr] (WEP.south) to[out=-65, in=-115] node[midway, below=5pt, lbl] {$H_3 \text{ (Direct): } \beta = 0.094^{***}$} (EIR.south);
+% 7. Hypothesized Direct Path
+\draw[dirarr] (WEP.south) to[out=-65, in=-115] node[midway, below=5pt, lbl] {$H_3 \text{ (Direct, } +)$} (EIR.south);
 
 \end{tikzpicture}
-\caption{Conceptual Model and Structural Hypotheses Architecture (PROCESS Model 7 / Moderated Mediation SEM).}
+\caption{Conceptual Model and Structural Hypotheses Architecture (First-Stage Moderated Mediation Model / PROCESS Model 7 Specification).}
 \label{fig:conceptual_model}
 \end{figure*}

@@ -2,7 +2,7 @@
 \label{sec:methodology}
 
 \subsection{Two-Study Cross-Cultural Computational Architecture}
-To overcome the pervasive social desirability bias that invalidates self-reported surveys on relationship misconduct, this study implements a **Two-Study Cross-Cultural Computational Mixed-Methods Architecture**. As depicted in Figure \ref{fig:method_pipeline}, the empirical strategy integrates: (1) large-scale naturalistic web-scraping of public first-person relationship dispute disclosures, treating online adjudication repositories strictly as an unobtrusive observational window into authentic interpersonal dynamics, (2) a **Split-Source Validation Framework** to prevent single-source algorithmic bias, (3) a human-validated bilingual Large Language Model (LLM) annotation pipeline, and (4) moderated mediation path modeling (Hayes' PROCESS Model 7 / SEM) evaluated across Western and non-Western cultural cohorts.
+To overcome the pervasive social desirability bias that invalidates self-reported surveys on relationship misconduct, this study implements a **Two-Study Cross-Cultural Computational Mixed-Methods Architecture**. As depicted in Figure \ref{fig:method_pipeline}, the empirical strategy integrates: (1) large-scale naturalistic web-scraping of public first-person relationship dispute disclosures, treating online adjudication repositories strictly as an unobtrusive observational window into authentic interpersonal dynamics, (2) a **Split-Source Validation Framework** to prevent single-source algorithmic bias, (3) a human-validated bilingual Large Language Model (LLM) annotation pipeline, and (4) first-stage moderated mediation path modeling (PROCESS Model 7 architecture) estimated via Partial Least Squares Structural Equation Modeling (PLS-SEM) across Western and non-Western cultural cohorts.
 
 \begin{figure*}[htbp]
 \centering
@@ -17,7 +17,7 @@ To overcome the pervasive social desirability bias that invalidates self-reporte
     \item \textit{Source B (Behavioral Outcome \& Social Adjudication):} Documented Actions + Crowd-Sourced Moral Verdicts (`YTA`/`NTA` / communal backlash) $\rightarrow$ $EIR$
 \end{itemize}
 \textbf{Psychometric Validation Layer:} Standardized Bilingual LLM Annotation Protocol (decoding Temperature = 0.10, triangulated with crowd-adjudicated moral verdicts)\\[1ex]
-\textbf{Statistical Layer:} Moderated Mediation Path Modeling (PROCESS Model 7) + Cross-Cultural Multi-Group Invariance (MICOM)
+\textbf{Statistical Layer:} Moderated Mediation Path Modeling (PROCESS Model 7 Specification via PLS-SEM) + Cross-Cultural Multi-Group Invariance (MICOM)
 \end{minipage}
 }
 \caption{Two-Study Cross-Cultural Computational Research Architecture and Split-Source Validation Framework.}
@@ -84,7 +84,7 @@ To ensure psychometric rigor and replicability across languages, we developed a 
 Construct operationalization followed the standardized 1--7 Likert codebook (Section \ref{subsec:construct_operationalization}; see Online Supplementary Material Sections S1--S2 for verbatim prompts, system instructions, and bilingual rating rubrics). To ensure scoring stability, each conflict narrative was processed through prompt ensembles evaluating narrator discursive patterns ($WEP, LRA, SSA$), achieving high cross-model consensus ($\kappa \ge 0.82$). Furthermore, to anchor the computational extractions in real-world ground truth without single-source algorithmic bias, the behavioral outcome ($EIR$) was directly triangulated with authentic crowd-sourced moral verdicts from the respective community adjudication archives (Reddit \texttt{YTA}/\texttt{NTA} verdicts and Thai communal accountability ratios).
 
 \subsection{Statistical Protocol and Measurement Invariance}
-The structured dataset was analyzed using moderated mediation path modeling (Hayes' PROCESS Model 7 / SEM) via 5,000-resample non-parametric bootstrapping. To verify cross-cultural generalizability between Study 1 and Study 2, we conducted Measurement Invariance of Composite Models (MICOM) testing \citep{henseler2016testing,hair2019use} (detailed 3-step empirical results reported in Online Supplementary Material Section S3):
+The structured dataset was analyzed using Partial Least Squares Structural Equation Modeling (PLS-SEM) specifying a first-stage moderated mediation architecture (structurally corresponding to Hayes' PROCESS Model 7 topology) evaluated via 5,000-resample non-parametric bootstrapping. To verify cross-cultural generalizability between Study 1 and Study 2, we conducted Measurement Invariance of Composite Models (MICOM) testing \citep{henseler2016testing,hair2019use} (detailed 3-step empirical results reported in Online Supplementary Material Section S3):
 \begin{enumerate}[leftmargin=*]
     \item \textbf{Configural Invariance:} Established identical indicator assignments across both corpora.
     \item \textbf{Compositional Invariance:} Evaluated via permutation testing ($c \ge 0.95, p > 0.05$).
