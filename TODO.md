@@ -1,12 +1,11 @@
 # TODO
-> **Rules:** `[]` -> todo, `[✅]` -> done.  
+> **Rules:** `[]` -> todo, `[✅]` -> done (strictly no `-` in front of brackets).  
 > **Substantive Research Log:** Document substantive research milestones under `# LOG` per `AGENTS.md` §2.11.
 
-- [✅] **IRB Package & Protocol Alignment:** ปรับปรุง `irb/irb-ethics-package.tex`, `review/protocol.md`, และ `journal_target.html` ให้ตรงกับชื่อเรื่องวิจัยหลักและพารามิเตอร์กลุ่มตัวอย่างสองการศึกษา ($N = 14,250$) พร้อม Recompile `irb/irb-ethics-package.pdf`
-- [✅] **Supplementary Materials Package (`journal/supplementary.tex`):** สร้างเอกสารภาคผนวกวิชาการฉบับสมบูรณ์สำหรับยื่นตีพิมพ์วารสาร Q1 (S1: Codebook 1–7 Likert, S2: LLM Prompts & Temperature = 0.10, S3: MICOM Invariance, S4: Bilingual Case Vignettes, S5: Alternative Model Testing) พร้อม Compile `journal/supplementary.pdf`
-- [✅] **conceptual_model: เลื่อน Metric Invariance (MICOM) ลงนิดหน่อย**
-  - [✅] เลื่อนตำแหน่งในแนวแกนดิ่งจาก `y = 366` ลงมาที่ `y = 375` (text `y = 390`) เพื่อสร้างความสมดุลของช่องไฟในแนวตั้ง (ห่างจาก Total Effect 25px และห่างจากกล่องล่าง 23px) ทั้งใน [`conceptual-model.html`](conceptual-model.html) และ [`journal_thai.html`](journal_thai.html)
-- [✅] **Research Logging & Synchronization:** บันทึก Substantive Research Log ใน `TODO.md` (# LOG), `.log/research-log.md`, และ `irb/AI_USE_LOG.md` ตาม `AGENTS.md` §2.11
+[✅] update context: no need - in front of []
+[✅] reduce font of Table 1,2,4,5,6 (Table 1 set to \tiny; Tables 2, 4, 5, 6 reduced to \footnotesize with \resizebox to eliminate all overfull margin overflows in journal/journal.pdf)
+[✅] เพิ่ม height ของ Figure 1, Figure 3 เพื่อให้ diagram, tag, value ไม่ทับกัน
+
 
 ## # LOG
 - **2026-10-29 (Online Supplementary Material & IRB Protocol Synchronization):** Engineered the submission-grade Online Supplementary Material (OSM) package (`journal/supplementary.tex`, 8 pages, `journal/supplementary.pdf`) meeting international Q1 standards (*Computers in Human Behavior*, *Journal of Language and Social Psychology*). Formulated Appendices S1–S5 covering the extended 1–7 Likert psychometric codebook with bilingual anchors, deterministic LLM decoding protocols (`Temperature = 0.10`, multi-model consensus $\kappa \ge 0.82$), MICOM 3-step measurement invariance tables across Western ($N = 10,000$) and Thai ($N = 4,250$) cohorts ($\Delta \beta \le 0.032, p_{\text{MGA}} > 0.05$), qualitative dispute vignettes with crowd-consensus triangulation, and PROCESS Model 4/7/8 sensitivity comparisons confirming Model 7's statistical superiority ($\Delta \text{AIC} = -1,579.6$). Synchronized `irb/irb-ethics-package.tex` with dual-corpus sample parameters and recompiled `irb/irb-ethics-package.pdf`. Added Henseler et al. (2016) and Hair et al. (2019) to `journal/library.bib` and recompiled master manuscript `journal/journal.pdf` (18 pages).

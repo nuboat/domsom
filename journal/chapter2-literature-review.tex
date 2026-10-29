@@ -24,7 +24,7 @@ Table \ref{tab:synthesis_matrix} summarizes the verified 2022--2026 Q1 corpus, d
 
 \begin{table*}[htbp]
 \centering
-\scriptsize
+\tiny
 \begin{tabularx}{\textwidth}{p{2.8cm}p{2.6cm}p{3.2cm}p{4.2cm}p{2.8cm}}
 \toprule
 \textbf{Study (Year) \& Tag} & \textbf{Key Variables / Focus} & \textbf{Methodology \& Sample} & \textbf{Main Empirical Findings} & \textbf{Limitations \& Gaps} \\
@@ -81,61 +81,62 @@ Based on this theoretical synthesis, we advance four testable structural hypothe
 \begin{figure*}[htbp]
 \centering
 \begin{tikzpicture}[
-    box/.style={rectangle, draw=blue!70!black, fill=blue!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
-    medbox/.style={rectangle, draw=purple!70!black, fill=purple!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
-    outbox/.style={rectangle, draw=red!70!black, fill=red!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
-    modbox/.style={rectangle, draw=orange!80!black, fill=orange!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    box/.style={rectangle, draw=blue!70!black, fill=blue!5, rounded corners=5pt, thick, align=center, inner sep=4.5pt, font=\small},
+    medbox/.style={rectangle, draw=purple!70!black, fill=purple!5, rounded corners=5pt, thick, align=center, inner sep=4.5pt, font=\small},
+    outbox/.style={rectangle, draw=red!70!black, fill=red!5, rounded corners=5pt, thick, align=center, inner sep=4.5pt, font=\small},
+    modbox/.style={rectangle, draw=orange!80!black, fill=orange!5, rounded corners=5pt, thick, align=center, inner sep=5pt, font=\small},
     arr/.style={-{Stealth[scale=1.1]}, thick, blue!70!black},
     modarr/.style={-{Stealth[scale=1.1]}, thick, dashed, orange!80!black},
     dirarr/.style={-{Stealth[scale=1.1]}, thick, dashed, red!70!black},
-    lbl/.style={font=\footnotesize\bfseries, fill=white, inner sep=2pt, rounded corners=2pt}
+    lbl/.style={font=\scriptsize\bfseries, fill=white, inner sep=2pt, rounded corners=2pt, draw=gray!30, align=center}
 ]
 
 % Nodes
-\node[box, text width=3.3cm] (WEP) at (0, 0) {
+\node[box, text width=2.9cm] (WEP) at (0, 0) {
     \textbf{Predictor (X)}\\[0.3ex]
     \textbf{Weaponized Egalitarian}\\[0.1ex]
     \textbf{Posturing (WEP)}\\[0.4ex]
     \scriptsize 50/50 Claims $\cdot$ Equity Rhetoric
 };
 
-\node[medbox, text width=3.3cm] (SSA) at (5.5, 0) {
+\node[medbox, text width=3.35cm] (SSA) at (6.1, 0) {
     \textbf{Cognitive Mediator (M)}\\[0.3ex]
     \textbf{Self-Serving Attribution}\\[0.1ex]
     \textbf{\& Licensing (SSA)}\\[0.4ex]
     \scriptsize Partner-Blaming $\cdot$ Moral Credit
 };
 
-\node[outbox, text width=3.3cm] (EIR) at (11, 0) {
+\node[outbox, text width=2.9cm] (EIR) at (12.2, 0) {
     \textbf{Outcome Variable (Y)}\\[0.3ex]
     \textbf{Exploitative Interpersonal}\\[0.1ex]
     \textbf{Relations (EIR)}\\[0.4ex]
     \scriptsize Labor Shifting $\cdot$ Crowd Verdict
 };
 
-\node[modbox, text width=4.2cm] (LRA) at (2.75, 2.3) {
+\node[modbox, text width=4.3cm] (LRA) at (3.0, 4.4) {
     \textbf{Interpersonal Moderator (W)}\\[0.3ex]
     \textbf{Legitimized Rational Accounts (LRA)}\\[0.4ex]
     \scriptsize ``I Have My Reasons'' $\cdot$ Plausible Excuses
 };
 
 % Coordinate on WEP -> SSA path for moderation
-\coordinate (path_wep_ssa) at (2.75, 0);
+\coordinate (path_wep_ssa) at (3.0, 0);
 
-% H1 Mediation Paths
-\draw[arr] (WEP) -- (SSA) node[midway, above, lbl] {$H_1: \beta = 0.384^{***}$};
-\draw[arr, draw=purple!70!black] (SSA) -- (EIR) node[midway, above, lbl] {$H_1: \beta = 0.496^{***}$};
+% 4. H1 Mediation Paths (with stacked labels for maximum clearance)
+\draw[arr] (WEP) -- (SSA) node[midway, below=5pt, lbl] {$H_1$\\[-0.2ex]$\beta = 0.384^{***}$};
+\draw[arr, draw=purple!70!black] (SSA) -- (EIR) node[midway, above=5pt, lbl] {$H_1$\\[-0.2ex]$\beta = 0.496^{***}$};
 
-% H2 Moderation Path
-\draw[modarr] (LRA) -- (path_wep_ssa) node[pos=0.5, right, lbl] {$H_2 \text{ (Mod): } \beta = 0.248^{***}$};
-
-% H3 Direct Path (Curved Below)
-\draw[dirarr] (WEP.south) to[out=-35, in=-145] node[midway, below, lbl] {$H_3 \text{ (Direct): } \beta = 0.094^{***}$} (EIR.south);
+% H2 Moderation Path with badge centered on vertical dashed line
+\draw[modarr] (LRA.south) -- (path_wep_ssa);
+\node[lbl, draw=orange!60, fill=white] at (3.0, 2.3) {$H_2 \text{ (Mod): } \beta = 0.248^{***}$};
 
 % Mediation Summary Badge
-\node[fill=blue!10, draw=blue!40, rounded corners=3pt, font=\scriptsize, align=center] at (5.5, 0.85) {
+\node[fill=blue!10, draw=blue!40, rounded corners=4pt, font=\scriptsize, align=center, inner sep=4pt] at (6.1, -2.2) {
     \textbf{Total Effect ($H_1$):} $\beta = 0.284^{***}$ (Indirect: $\beta = 0.190^{***}$, $\text{VAF} = 67.0\%$)
 };
+
+% H3 Direct Path
+\draw[dirarr] (WEP.south) to[out=-65, in=-115] node[midway, below=5pt, lbl] {$H_3 \text{ (Direct): } \beta = 0.094^{***}$} (EIR.south);
 
 \end{tikzpicture}
 \caption{Conceptual Model and Structural Hypotheses Architecture (PROCESS Model 7 / Moderated Mediation SEM).}

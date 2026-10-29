@@ -6,7 +6,8 @@ Prior to assessing structural paths, the measurement model was evaluated across 
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\resizebox{\textwidth}{!}{
 \begin{tabular}{lcccc}
 \toprule
 \textbf{Latent Construct \& Indicators} & \textbf{Loadings ($\lambda$)} & \textbf{Cronbach's $\alpha$} & \textbf{CR} & \textbf{AVE} \\
@@ -35,6 +36,7 @@ Prior to assessing structural paths, the measurement model was evaluated across 
 \quad EIR4: Crowd-Adjudicated Moral Condemnation & 0.768 & & & \\
 \bottomrule
 \end{tabular}
+}
 \caption{Measurement Model Reliability and Convergent Validity ($N = 10,000$).}
 \label{tab:measurement_model}
 \end{table}
@@ -63,7 +65,8 @@ The structural model was evaluated using a 5,000-resample non-parametric bootstr
 
 \begin{table*}[htbp]
 \centering
-\small
+\footnotesize
+\resizebox{\textwidth}{!}{
 \begin{tabular}{lccccccc}
 \toprule
 \textbf{Hypothesized Structural Path} & \textbf{Path ($\beta$)} & \textbf{SE} & \textbf{t-value} & \textbf{p-value} & \textbf{95\% Boot CI} & \textbf{Effect Size ($f^2$)} & \textbf{Decision} \\
@@ -79,6 +82,7 @@ The structural model was evaluated using a 5,000-resample non-parametric bootstr
 \textbf{Index of Moderated Mediation} & 0.123 & 0.010 & 12.30 & $< 0.001$ & [0.104, 0.142] & --- & Supported \\
 \bottomrule
 \end{tabular}
+}
 \caption{Moderated Mediation Path Estimates and Hypotheses Testing (Study 1: Reddit AITA $N = 10,000$).}
 \label{tab:structural_results}
 \end{table*}
@@ -86,38 +90,38 @@ The structural model was evaluated using a 5,000-resample non-parametric bootstr
 \begin{figure*}[htbp]
 \centering
 \begin{tikzpicture}[
-    box/.style={rectangle, draw=blue!70!black, fill=blue!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
-    medbox/.style={rectangle, draw=purple!70!black, fill=purple!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
-    outbox/.style={rectangle, draw=red!70!black, fill=red!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
-    modbox/.style={rectangle, draw=orange!80!black, fill=orange!5, rounded corners=5pt, thick, align=center, inner sep=6pt, font=\small},
+    box/.style={rectangle, draw=blue!70!black, fill=blue!5, rounded corners=5pt, thick, align=center, inner sep=4.5pt, font=\small},
+    medbox/.style={rectangle, draw=purple!70!black, fill=purple!5, rounded corners=5pt, thick, align=center, inner sep=4.5pt, font=\small},
+    outbox/.style={rectangle, draw=red!70!black, fill=red!5, rounded corners=5pt, thick, align=center, inner sep=4.5pt, font=\small},
+    modbox/.style={rectangle, draw=orange!80!black, fill=orange!5, rounded corners=5pt, thick, align=center, inner sep=5pt, font=\small},
     arr/.style={-{Stealth[scale=1.1]}, very thick, blue!70!black},
     modarr/.style={-{Stealth[scale=1.1]}, very thick, dashed, orange!80!black},
     dirarr/.style={-{Stealth[scale=1.1]}, very thick, dashed, red!70!black},
-    lbl/.style={font=\footnotesize\bfseries, fill=white, inner sep=2.5pt, rounded corners=2pt, draw=gray!30}
+    lbl/.style={font=\scriptsize\bfseries, fill=white, inner sep=2pt, rounded corners=2pt, draw=gray!30, align=center}
 ]
 
 % Nodes
-\node[box, text width=3.3cm] (WEP) at (0, 0) {
+\node[box, text width=2.9cm] (WEP) at (0, 0) {
     \textbf{Predictor (X)}\\[0.3ex]
     \textbf{Weaponized Egalitarian}\\[0.1ex]
     \textbf{Posturing (WEP)}
 };
 
-\node[medbox, text width=3.4cm] (SSA) at (5.5, 0) {
+\node[medbox, text width=3.35cm] (SSA) at (6.1, 0) {
     \textbf{Cognitive Mediator (M)}\\[0.3ex]
     \textbf{Self-Serving Attribution}\\[0.1ex]
     \textbf{\& Licensing (SSA)}\\[0.3ex]
     \footnotesize \textbf{\textcolor{purple!80!black}{$R^2 = 0.528$}}
 };
 
-\node[outbox, text width=3.4cm] (EIR) at (11, 0) {
+\node[outbox, text width=2.9cm] (EIR) at (12.2, 0) {
     \textbf{Outcome Variable (Y)}\\[0.3ex]
     \textbf{Exploitative Interpersonal}\\[0.1ex]
     \textbf{Relations (EIR)}\\[0.3ex]
     \footnotesize \textbf{\textcolor{red!80!black}{$R^2 = 0.442$}}
 };
 
-\node[modbox, text width=4.2cm] (LRA) at (2.75, 2.3) {
+\node[modbox, text width=4.3cm] (LRA) at (3.0, 4.4) {
     \textbf{Moderator (W)}\\[0.3ex]
     \textbf{Legitimized Rational}\\[0.1ex]
     \textbf{Accounts (LRA)}\\[0.3ex]
@@ -125,22 +129,23 @@ The structural model was evaluated using a 5,000-resample non-parametric bootstr
 };
 
 % Coordinate on WEP -> SSA path for moderation
-\coordinate (path_wep_ssa) at (2.75, 0);
+\coordinate (path_wep_ssa) at (3.0, 0);
 
 % H1 Mediation Paths with beta and p-value
-\draw[arr] (WEP) -- (SSA) node[midway, above=2pt, lbl] {$\beta = 0.384^{***}$};
-\draw[arr, draw=purple!70!black] (SSA) -- (EIR) node[midway, above=2pt, lbl] {$\beta = 0.496^{***}$};
+\draw[arr] (WEP) -- (SSA) node[midway, below=6pt, lbl] {$\beta = 0.384^{***}$};
+\draw[arr, draw=purple!70!black] (SSA) -- (EIR) node[midway, above=6pt, lbl] {$\beta = 0.496^{***}$};
 
 % H2 Moderation Path
-\draw[modarr] (LRA) -- (path_wep_ssa) node[pos=0.5, right=3pt, lbl] {$H_2 \text{ (Mod): } \beta = 0.248^{***}$};
+\draw[modarr] (LRA.south) -- (path_wep_ssa);
+\node[lbl, draw=orange!60, fill=white] at (3.0, 2.3) {$H_2 \text{ (Mod): } \beta = 0.248^{***}$};
 
-% H3 Direct Path (Curved Below)
-\draw[dirarr] (WEP.south) to[out=-35, in=-145] node[midway, below=2pt, lbl] {$H_3 \text{ (Direct): } \beta = 0.094^{***}$} (EIR.south);
-
-% Mediation Summary Badge
-\node[fill=blue!10, draw=blue!40, rounded corners=3pt, font=\scriptsize, align=center] at (5.5, 0.85) {
+% Total Effect Badge
+\node[fill=blue!10, draw=blue!40, rounded corners=4pt, font=\scriptsize, align=center, inner sep=4pt] at (6.1, -2.2) {
     \textbf{Total Effect:} $\beta = 0.284^{***}$ (Indirect: $\beta = 0.190^{***}$, $\text{VAF} = 67.0\%$)
 };
+
+% H3 Direct Path
+\draw[dirarr] (WEP.south) to[out=-65, in=-115] node[midway, below=5pt, lbl] {$H_3 \text{ (Direct): } \beta = 0.094^{***}$} (EIR.south);
 
 \end{tikzpicture}
 \caption{Empirical Structural Model and Bootstrapped Path Estimates (PLS-SEM, $N = 10,000$; $^{***}p < 0.001$).}
@@ -161,7 +166,8 @@ Measurement Invariance of Composite Models (MICOM) established full metric and c
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\resizebox{\textwidth}{!}{
 \begin{tabular}{lcccc}
 \toprule
 \textbf{Structural Relationship} & \textbf{Study 1: English ($\beta$)} & \textbf{Study 2: Thai ($\beta$)} & \textbf{Difference ($\Delta \beta$)} & \textbf{p-value (MGA)} \\
@@ -174,6 +180,7 @@ Indirect Effect ($WEP \rightarrow SSA \rightarrow EIR$) & 0.190 & 0.165 & 0.025 
 Total Effect ($WEP \rightarrow EIR$) & 0.284 & 0.253 & 0.031 & 0.062 \\
 \bottomrule
 \end{tabular}
+}
 \caption{Cross-Cultural Multi-Group Analysis (MGA) and Invariance Testing (Study 1 vs. Study 2).}
 \label{tab:mga_results}
 \end{table}
@@ -183,7 +190,8 @@ To confirm that the behavioral outcome variable (\textit{EIR}) was not an artifa
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\resizebox{\textwidth}{!}{
 \begin{tabular}{lccccc}
 \toprule
 \textbf{Detection Architecture} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{Macro F1} & \textbf{ROC-AUC} \\
@@ -194,6 +202,7 @@ Fine-Tuned RoBERTa (Single Model) & 0.784 & 0.771 & 0.792 & 0.781 & 0.776 \\
 \textbf{Bilingual LLM Ensemble (Temperature = 0.10)} & \textbf{0.896} & \textbf{0.884} & \textbf{0.902} & \textbf{0.893} & \textbf{0.885} \\
 \bottomrule
 \end{tabular}
+}
 \caption{Benchmark Comparison of Architectures in Predicting Ground-Truth Crowd Moral Verdicts ($N = 2,500$ Test Set).}
 \label{tab:llm_benchmark}
 \end{table}
