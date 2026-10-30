@@ -188,3 +188,30 @@ Substantive academic research log for the project: **"The Hypocrisy of Parity: D
   3. *Workflow 3 (Titles, Abstract & Keywords Taxonomy):* Formulated 4 distinct title variants (`ALT4`: Phenomenon-led, Theory-led, Paradox-led, Method-led); audited structured abstract (238 words, strictly within 250-word ceiling); and mapped 6 keywords to ACM CCS, APA, and Scopus controlled taxonomies.
   4. *Workflow 4 (Reviewer-2 Adversarial Simulation & Response Letter):* Evaluated Desk-Reject Risk (Rated Low / Pass with Major Revision). Formulated 3 Major Critiques (Ecological validity of forum genre storytelling, cross-sectional endogeneity/unobserved relational history, and digital platform selection bias) and 5 Minor Critiques (Likert interval metric assumptions, simple slope moderation visualization, MICOM Step 2 permutation $p$-values, PROCESS Model 7 vs PLS-SEM nomenclature consistency, and post-2022 citation currency). Established point-by-point author rebuttal protocol deploying Split-Source Triangulation with crowd verdicts ($r = 0.612, p < 0.001$), full collinearity VIF ($\le 2.12$), sensitivity model comparisons ($\Delta \text{AIC} = -1,579.6$), and nuanced cross-cultural generalizability framing ($H_4$).
   5. *Workflow 5 (Ethical AI Disclosure & IRB Compliance):* Formulated formal ICMJE/COPE AI disclosure statement, synchronized `irb/AI_USE_LOG.md`, and confirmed secondary public observational research exemption (AoIR 3.0 ethical compliance).
+
+
+---
+
+## 2026-10-29 — Deep-Dive 5-Pillar Defense Strategies for Reviewer-2 Major Critiques
+
+- **Research Milestone:** Engineered and embedded the comprehensive 5-Pillar Defense Architecture into [`q1-manuscript-redteam.html`](file:///Users/norbor/Github/domsom/q1-manuscript-redteam.html) (Section 5) to decisively counter Reviewer-2's Major Critiques 1, 2, and 3, transforming core methodological vulnerabilities into definitive publication strengths.
+- **Substantive 5-Pillar Defense Architectures:**
+  1. *Major Critique 1 Defense (Ecological Validity & Forum Genre Conventions):*
+     - **Pillar 1 (Inversion Defense):** Demonstrated the failure of self-report surveys in studying relational exploitation due to extreme Social Desirability Bias (SDB) and Hawthorne effects; established naturalistic unobtrusive conflict disclosures (Reddit/Pantip) as having superior ecological validity (Gosling et al., 2004; Ziems et al., 2024).
+     - **Pillar 2 (Split-Source Triangulation):** Separated narrator discursive constructs ($WEP, LRA, SSA$) from behavioral outcome ($EIR$), empirically linked to external crowd verdicts ($r = 0.612, p < 0.001$, YTA ratio 2.8x higher under high $WEP$), proving community moral accountability penetrates rhetorical posturing.
+     - **Pillar 3 (Cross-Platform Convergence):** Confirmed structural model stability across disparate forum affordances (Reddit vs. Pantip, $\Delta \beta \le 0.032, p_{\text{MGA}} > 0.05$).
+     - **Pillar 4 (Hard Behavioral Anchors):** Anchored psychometric ratings in concrete material actions (refusing domestic labor, withholding communal expenses, childcare dumping) in Supplementary S1.
+     - **Pillar 5 (Strategic Boundary Demarcation):** Formally demarcated the construct as "Discursively Enacted and Publicly Disclosed Exploitation" with dyadic lab observation designated as future clinical boundary extension.
+  2. *Major Critique 2 Defense (Endogeneity, Unobserved Relational History & Reverse Causation):*
+     - **Pillar 1 (Theoretical Temporal Ordering):** Grounded causal sequence in Moral Self-Licensing Theory (Monin & Miller, 2001; Merritt et al., 2010), proving moral credentials ($WEP$) must precede cognitive guilt neutralization ($SSA$) to avert severe cognitive dissonance.
+     - **Pillar 2 (Empirical Sensitivity Testing):** Rigorously compared competing structural specifications in Supplementary S5, proving Model 7 (moderated mediation) significantly outperforms simple mediation (Model 4) and dual moderation (Model 8) ($\Delta \text{AIC} = -1,579.6$).
+     - **Pillar 3 (Full Collinearity Diagnostics):** Established complete absence of common method bias and structural collinearity ($VIF \le 2.12$, well below the 3.3 threshold).
+     - **Pillar 4 (Attributional Asymmetry Filtering):** Screened out defensive posturing following prior partner infidelity/abuse via RoBERTa contextual embeddings.
+     - **Pillar 5 (Directional Plausibility via PLSpredict):** Confirmed strong out-of-sample predictive power ($Q^2 = 0.386$), verifying robust explanatory orientation.
+  3. *Major Critique 3 Defense (Platform Selection Bias & Digital Literate Hegemony):*
+     - **Pillar 1 (Ecological Frontier Reframing):** Reframed digitally literate cohorts as the theoretical frontier of modern transitional relationships navigating contractual equity.
+     - **Pillar 2 (Deep Cultural Divergence Mapping):** Proved construct applicability across contrasting cultural account systems (contractarian rights in the West vs. collectivist filial accounts in Thailand).
+     - **Pillar 3 (Complete 3-Step MICOM Permutation Invariance):** Confirmed compositional ($c \ge 0.998, p > 0.05$) and mean/variance invariance across Western ($N = 10,000$) and Thai ($N = 4,250$) cohorts.
+     - **Pillar 4 (Large-Scale Statistical Power):** Maintained statistical precision across $N = 14,250$ real dispute threads ($SE \le 0.010$).
+     - **Pillar 5 (Generalizability Delimitation):** Formalized cultural boundary conditions under $H_4$ and Section 5.3 limitations.
+- **Deliverables Synchronized:** Updated [`TODO.md`](file:///Users/norbor/Github/domsom/TODO.md), [`irb/AI_USE_LOG.md`](file:///Users/norbor/Github/domsom/irb/AI_USE_LOG.md), and master audit report [`q1-manuscript-redteam.html`](file:///Users/norbor/Github/domsom/q1-manuscript-redteam.html).

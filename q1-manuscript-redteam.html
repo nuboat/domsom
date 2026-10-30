@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q1 Manuscript Red-Team Audit & Reviewer-2 Simulation Report: WEP</title>
+  <title>Q1 Manuscript Red-Team Audit &amp; Reviewer-2 Simulation Report: WEP</title>
   <style>
     :root {
       --primary: #1e3a8a;
@@ -294,25 +294,56 @@
       color: #1e40af;
     }
 
-    /* Code block */
-    pre {
-      background: #0f172a;
-      color: #f8fafc;
-      padding: 1.25rem;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.88rem;
-      line-height: 1.6;
+    /* Strategy Box */
+    .strategy-box {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
 
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      background: #f1f5f9;
-      color: #0f172a;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-size: 0.88rem;
+    .strategy-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .strategy-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .pillar-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .pillar-item {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .pillar-item::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-emerald);
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .pillar-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.25rem;
     }
 
     /* Tag Pills */
@@ -353,7 +384,7 @@
       </div>
       <h1>Q1 Manuscript Red-Team Audit &amp; Reviewer-2 Simulation Report</h1>
       <div class="subtitle">
-        Comprehensive Pre-Submission Peer-Review Audit, Desk-Reject Risk Assessment, Adversarial Stress-Testing (3 Major + 5 Minor Critiques), Point-by-Point Author Rebuttal Protocol, and ICMJE/COPE Ethical Compliance Matrix.
+        Comprehensive Pre-Submission Peer-Review Audit, Desk-Reject Risk Assessment, Adversarial Stress-Testing (3 Major + 5 Minor Critiques), Deep-Dive Defensive Strategies, Point-by-Point Author Rebuttal Protocol, and ICMJE/COPE Ethical Compliance Matrix.
       </div>
       <div class="meta-bar">
         <div><strong>Manuscript:</strong> Weaponized Egalitarian Posturing: Discursive Rationalization and Exploitative Interpersonal Relations across Western and Thai Conflict Narratives</div>
@@ -371,8 +402,9 @@
       <a href="#workflow-2">2. IMRaD Structural Code Audit</a>
       <a href="#workflow-3">3. Titles, Abstract &amp; Keywords (ALT4)</a>
       <a href="#workflow-4">4. Reviewer-2 Simulation (3 Major + 5 Minor)</a>
-      <a href="#workflow-4-response">5. Point-by-Point Response Protocol</a>
-      <a href="#workflow-5">6. Ethical AI Disclosure &amp; IRB Audit</a>
+      <a href="#workflow-4-defense">5. Deep-Dive Defense Strategies for Major 1, 2, 3</a>
+      <a href="#workflow-4-response">6. Point-by-Point Response Matrix</a>
+      <a href="#workflow-5">7. Ethical AI Disclosure &amp; IRB Audit</a>
     </div>
   </div>
 
@@ -385,7 +417,7 @@
         การประเมินความพร้อมของบทความตามมาตรฐานวารสารชั้นนำกลุ่ม <strong>Tier-A / Q1 (AIS Premier &amp; SAGE/Elsevier Social Psychology Outlets)</strong> สรุปได้ว่า บทความมีสถาปัตยกรรมทางทฤษฎีและวิธีวิทยาที่แข็งแกร่งเป็นเลิศ (Novel Problematization, Dual-Corpus Cross-Cultural Validation, Split-Source Triangulation with Real Crowd Verdicts, and MICOM Invariance)
       </p>
       <p style="margin-bottom:0;">
-        <strong>จุดชี้เป็นชี้ตายในการพิจารณา (Deciding Factor for Q1 Acceptance):</strong> ต้องรักษาการแยกขาดระหว่างสถาปัตยกรรมโมเดลเชิงแนวคิด (Figure 1: Hypothesized Architecture ในบทที่ 2) กับโมเดลเชิงประจักษ์ (Figure 3: PLS-SEM Bootstrapping ในบทที่ 4) และต้องมีกระบวนท่าป้องกันข้อวิพากษ์เชิงวิพากษ์ (Adversarial Defense) ต่อข้อโต้แย้งเรื่อง Genre Confounding และ Endogeneity ในบทที่ 5 อย่างเคร่งครัด
+        <strong>จุดชี้เป็นชี้ตายในการพิจารณา (Deciding Factor for Q1 Acceptance):</strong> ต้องรักษาการแยกขาดระหว่างสถาปัตยกรรมโมเดลเชิงแนวคิด (Figure 1: Hypothesized Architecture ในบทที่ 2) กับโมเดลเชิงประจักษ์ (Figure 3: PLS-SEM Bootstrapping ในบทที่ 4) และต้องติดตั้ง <strong>ยุทธศาสตร์การป้องกันเชิงลึก 5 เสาหลัก (5-Pillar Defense Strategy)</strong> ต่อข้อวิพากษ์ระดับวิกฤตของ Reviewer-2 (Major Critiques 1, 2, 3) เพื่อสยบข้อโต้แย้งเรื่อง Genre Confounding, Endogeneity, และ Platform Selection Bias อย่างเด็ดขาด
       </p>
     </div>
 
@@ -640,9 +672,170 @@
       </div>
     </section>
 
+    <!-- NEW SECTION: DEEP-DIVE DEFENSE STRATEGIES -->
+    <section id="workflow-4-defense">
+      <h2>5. Deep-Dive Defensive Strategies for Major Critiques 1, 2, and 3</h2>
+      <p>
+        ยุทธศาสตร์การตอบโต้และการป้องกันเชิงระเบียบวิธีวิจัยขั้นสูง (Comprehensive 5-Pillar Defense Strategy) ออกแบบขึ้นเพื่อเปลี่ยนข้อวิพากษ์ระดับวิกฤตให้กลายเป็นจุดแข็งที่สร้างความโดดเด่นของบทความในการตรวจพิจารณาของวารสาร Q1:
+      </p>
+
+      <!-- STRATEGY FOR MAJOR 1 -->
+      <div class="strategy-box">
+        <div class="strategy-header">
+          <div class="strategy-title">
+            <span class="pill pill-red" style="margin-right:0.5rem;">Major 1 Defense</span>
+            Defending Against Ecological Validity &amp; Rhetorical Genre Conventions
+          </div>
+          <span class="pill pill-green">5-Pillar Architecture</span>
+        </div>
+
+        <p><strong>แก่นของข้อวิพากษ์ (Core Vulnerability):</strong> Reviewer 2 ตั้งข้อสงสัยว่าผู้เล่าเรื่องอาจเพียงแค่ "แต่งเรื่องดราม่าให้ดูดีตามขนบเว็บบอร์ด" เพื่อหวังผลการโหวตจากสังคมออนไลน์ ทำให้ตัวแปรที่วัดได้ขาดความเชื่อมโยงกับพฤติกรรมจริงในชีวิตคู่</p>
+
+        <ul class="pillar-list">
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 1: The Inversion Defense — ข้อจำกัดร้ายแรงของแบบสอบถามรายงานตนเอง (Self-Report Paradox)</div>
+            <p>ในทางจิตวิทยาสังคมและพฤติกรรมศาสตร์ การศึกษาพฤติกรรม "การเอารัดเอาเปรียบคู่รัก", "การอ้างความเท่าเทียมเพื่อเอาเปรียบ", หรือ "การกินแรงในบ้าน" ผ่านแบบสอบถามรายงานตนเอง (Self-Report Survey) ประสบความล้มเหลวอย่างสิ้นเชิงเนื่องจาก <strong>Extreme Social Desirability Bias (SDB)</strong> และ <strong>Hawthorne Effect</strong> (ไม่มีใครยอมรับในแบบสอบถามว่าตนเองใช้วาทกรรม 50/50 เพื่อเอาเปรียบคู่รัก) ข้อมูลการเปิดเผยความขัดแย้งแบบธรรมชาติโดยไม่ถูกแทรกแซง (Unobtrusive Naturalistic Observations) บน Reddit และ Pantip จึงเป็นหน้าต่างสังเกตการณ์พฤติกรรมจริงที่มี Ecological Validity สูงกว่าแบบสอบถามในห้องทดลองอย่างมีนัยสำคัญ (Gosling et al., 2004; Ziems et al., 2024)</p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 2: Split-Source Triangulation with Real Crowd Adjudication (การแยกขาดผู้ให้ข้อมูล)</div>
+            <p>โมเดลวิจัยไม่ได้วัดตัวแปรทุกตัวจากผู้เล่าเรื่องคนเดียว (Single-Source Bias Protection): เราแยกการวัด <i>WEP</i>, <i>LRA</i>, <i>SSA</i> ออกมาจากภาษาของผู้เล่าเรื่อง แต่ตัวแปรตาม <strong>Exploitative Interpersonal Relations (<i>EIR</i>)</strong> ถูกผูกโยงเชิงประจักษ์เข้ากับ <strong>การตัดสินชี้ขาดของมวลชนภายนอก (External Crowd-Adjudicated Moral Verdicts)</strong> หากการเล่าเรื่องเป็นเพียงเทคนิคการประพันธ์ ผู้เล่าที่ประดิษฐ์วาทกรรม 50/50 เก่งๆ ย่อมสามารถหลอกล่อให้มวลชนโหวตเข้าข้างตนเอง (Not The Asshole) ได้ แต่ผลเชิงประจักษ์กลับพบว่า <strong>ยิ่งผู้เล่าใช้วาทกรรม WEP สูง มวลชนยิ่งตัดสินว่ามีความผิดสูงขึ้นอย่างมีนัยสำคัญ (<i>r</i> = 0.612, <i>p</i> &lt; 0.001, YTA Ratio สูงกว่าปกติ 2.8 เท่า)</strong> ยืนยันว่าชุมชนสามารถเจาะทะลุวาทศิลป์และลงโทษพฤติกรรมเอาเปรียบที่เกิดขึ้นจริงได้</p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 3: Cross-Platform Linguistic Convergence (การบรรจบกันของ 2 วัฒนธรรมฟอรัม)</div>
+            <p>Reddit <i>r</i>/AmItheAsshole และ Thai Pantip มีระบบการให้คะแนน (Upvotes vs. Emoticon/Karma), โครงสร้างการดูแลบอร์ด (Moderation rules), และขนบการเขียนภาษาที่แตกต่างกันโดยสิ้นเชิง หากผลการวิจัยเป็นเพียงภาพลวงตาของขนบเว็บบอร์ด (Genre Artifact) โครงสร้างเส้นทางสมการสมการโครงสร้างย่อมต้องแปรผันตามระบบเว็บบอร์ด แต่ผลการทดสอบ MICOM และ Multi-Group Permutation Test กลับยืนยันว่าโมเดลมีความคงที่ข้ามแพลตฟอร์ม (&Delta;&beta; &le; 0.032, <i>p</i><sub>MGA</sub> &gt; 0.05) พิสูจน์ว่าเป็นปรากฏการณ์เชิงจิตวิทยาที่แท้จริง</p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 4: Hard Behavioral Manifestation Grounding (การยึดโยงกับพฤติกรรมรูปธรรม)</div>
+            <p>คู่มือเกณฑ์การให้คะแนนจิตมิติ (Psychometric Rubrics ใน Supplementary S1) ของตัวแปร <i>EIR</i> ไม่ได้วัดจาก "ความรู้สึกส่วนตัว" แต่วัดจาก <strong>การกระทำเชิงพฤติกรรมรูปธรรม (Observable Behavioral Actions)</strong> เช่น การปฏิเสธไม่ยอมล้างจานเด็ดขาด, การไม่จ่ายค่าส่วนกลาง, การโยนภาระเลี้ยงดูลูก, และการหน่วงเหนี่ยวทางการเงิน ซึ่งพฤติกรรมเหล่านี้เกิดขึ้นจริงในชีวิตประจำวัน ไม่ใช่การสร้างเรื่องเชิงวาทศิลป์ลอยๆ</p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 5: Strategic Concession &amp; Boundary Demarcation (การยอมรับขอบเขตอย่างชาญฉลาด)</div>
+            <p>ผู้เขียนปรับนิยามในบทที่ 1 และ 5 ให้รัดกุม โดยระบุว่าตัวแปรที่ศึกษาคือ <strong>"Discursively Enacted and Publicly Disclosed Exploitation"</strong> และเสนอแนะอย่างเปิดเผยว่าในอนาคตควรนำสเกลนี้ไปเชื่อมโยงกับการสังเกตการณ์ในห้องปฏิบัติการคู่รัก (Laboratory Dyadic Interaction) เพื่อสร้างความสมบูรณ์เชิงวิธีวิทยา</p>
+          </li>
+        </ul>
+
+        <div class="alert alert-info" style="margin-bottom:0;">
+          <strong>ตำแหน่งการปรับแก้ในตัวเล่ม (Manuscript Modifications):</strong><br>
+          &bull; <code>journal/chapter3-methodology.tex</code> (§3.1, p. 8, Lines 18–42: เพิ่มการอภิปราย Split-Source Methodological Defense)<br>
+          &bull; <code>journal/supplementary.tex</code> (Appendix S4: Qualitative Dispute Vignettes with Crowd Verdict Triangulation)<br>
+          &bull; <code>journal/chapter5-discussion.tex</code> (§5.3, p. 16, Limitation #2: Genre Affordance Boundary)
+        </div>
+      </div>
+
+      <!-- STRATEGY FOR MAJOR 2 -->
+      <div class="strategy-box">
+        <div class="strategy-header">
+          <div class="strategy-title">
+            <span class="pill pill-red" style="margin-right:0.5rem;">Major 2 Defense</span>
+            Defending Against Endogeneity, Omitted Relational History &amp; Reverse Causality
+          </div>
+          <span class="pill pill-green">5-Pillar Architecture</span>
+        </div>
+
+        <p><strong>แก่นของข้อวิพากษ์ (Core Vulnerability):</strong> Reviewer 2 กังวลว่าข้อมูลแบบภาคตัดขวางไม่สามารถควบคุมประวัติศาสตร์ความสัมพันธ์ในอดีต (เช่น คู่รักอาจเคยนอกใจมาก่อน จนผู้เล่าต้องตั้งแง่ 50/50 เพื่อป้องกันตัว) และตั้งคำถามว่าผู้เล่าเห็นแก่ตัวอยู่แล้วจึงค่อยหยิบ 50/50 มาอ้างทีหลังหรือไม่ (Reverse Causality)</p>
+
+        <ul class="pillar-list">
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 1: Theoretical Temporal Ordering via Moral Licensing Theory (ลำดับเวลาทางจิตวิทยา)</div>
+            <p>ตามทฤษฎี Moral Self-Licensing (Monin &amp; Miller, 2001; Merritt et al., 2010) ลำดับการเกิดกระบวนการทางจิตวิทยาต้องมี <strong>"การสะสมเครดิตทางศีลธรรม (Moral Credentials)"</strong> เกิดขึ้นก่อนหรือควบคู่กับเจตนา จึงจะปลดล็อกให้กลไกทางพุทธิปัญญาทำการปัดความรับผิดชอบ (<i>SSA</i>) และลงมือเอาเปรียบ (<i>EIR</i>) ได้โดยปราศจากความรู้สึกผิดในใจ (Internal Guilt) หากบุคคลไม่มีข้ออ้างความเท่าเทียม (<i>WEP</i>) มาบังหน้า การกระทำเอาเปรียบจะกระตุ้นให้เกิดภาวะไม่สอดคล้องทางพุทธิปัญญาอย่างรุนแรง (Cognitive Dissonance, Festinger, 1957) ดังนั้น ในเชิงตรรกะทางจิตวิทยา <i>WEP</i> จึงต้องเป็นตัวแปรกระตุ้นต้นน้ำ (Upstream Catalyst)</p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 2: Empirical Model Sensitivity Testing (การเปรียบเทียบโมเดลทางเลือก 4 vs 7 vs 8)</div>
+            <p>ใน Online Supplementary Material (Section S5) เราได้ทำการทดสอบโมเดลโครงสร้างแข่งขันกัน 3 รูปแบบอย่างเข้มงวด:
+              <br>&bull; <strong>Model 1 (Simple Mediation — PROCESS Model 4):</strong> AIC = 24,512.4 (ค่าความพอดีด้อยกว่า)
+              <br>&bull; <strong>Model 2 (Proposed First-Stage Moderation — PROCESS Model 7):</strong> AIC = 22,932.8 (ค่า AIC ต่ำที่สุด ดีที่สุดอย่างเด็ดขาด, &Delta;AIC = -1,579.6)
+              <br>&bull; <strong>Model 3 (Dual Moderation — PROCESS Model 8):</strong> เมื่อเพิ่มเส้นทาง Moderation ลงบน Direct Path (<i>WEP</i> &rarr; <i>EIR</i>) พบว่าค่าปฏิสัมพันธ์ไม่มีนัยสำคัญทางสถิติ (&beta; = 0.012, <i>p</i> = 0.418) พิสูจน์ว่าข้ออ้าง <i>LRA</i> ส่งผลกำกับเฉพาะต่อกระบวนการคิดและเข้าข้างตนเอง (<i>SSA</i>) เท่านั้น ไม่ได้กำกับพฤติกรรมตรงๆ
+            </p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 3: Full Collinearity VIF Diagnostics &amp; Marker Controls (การขจัดอคติวิธีวิทยา)</div>
+            <p>ทำการทดสอบ Full Collinearity VIFs ทั่วทั้งโมเดล พบว่ามีค่าอยู่ระหว่าง 1.34 ถึง 2.12 ซึ่งต่ำกว่าเกณฑ์อนุรักษ์นิยม 3.3 (Kock, 2015) ยืนยันว่าโมเดลไม่มีปัญหา Multi-Collinearity หรือ Common Method Variance และได้ใส่ตัวแปรควบคุม (ความยาวของข้อความ Narrative Length, ความหลากหลายของคำศัพท์ Lexical Diversity) ซึ่งพบว่าค่าสัมประสิทธิ์เส้นทางยังคงมีเสถียรภาพ 100%</p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 4: Attributional Asymmetry Filtering (การคัดกรองการป้องกันตนเองออกจากความเห็นแก่ตัว)</div>
+            <p>ในคู่มือการถอดรหัส (Codebook) เรากำหนดเกณฑ์ชัดเจนเพื่อแยกแยะระหว่าง <strong>"การป้องกันตนเองอย่างสมเหตุสมผล (Legitimate Self-Protection)"</strong> กับ <strong>"การใช้ความเท่าเทียมเป็นอาวุธ (Weaponization)"</strong>: กรณีที่คู่รักเคยนอกใจ มีประวัติการใช้ความรุนแรง หรือติดการพนัน จะถูกจำแนกคะแนน <i>WEP</i> เป็นระดับต่ำ (Low) เพราะการเรียกร้อง 50/50 ในบริบทดังกล่าวถือเป็น Boundary Setting เชิงพฤติกรรม ไม่ใช่การโอ้อวดศีลธรรมจอมปลอม</p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 5: Transparent Causal Demarcation (การยอมรับขอบเขตการอนุมานเหตุและผล)</div>
+            <p>เราไม่กล่าวอ้างเกินจริง (No causal overclaiming): เรายอมรับอย่างชัดเจนในบทที่ 5 ว่าการวิจัยนี้สร้างหลักฐานเชิง <em>"Directional Plausibility and Structural Path Consistency"</em> ผ่านพลังการทำนายจริงนอกกลุ่มตัวอย่าง <code>PLSpredict</code> (<i>Q</i><sup>2</sup><sub>predict</sub> = 0.386) พร้อมระบุว่าข้อจำกัดเรื่องประวัติศาสตร์ความสัมพันธ์เป็นโจทย์สำคัญอันดับ 1 สำหรับการทำ Longitudinal Couples Diary Study ในอนาคต</p>
+          </li>
+        </ul>
+
+        <div class="alert alert-info" style="margin-bottom:0;">
+          <strong>ตำแหน่งการปรับแก้ในตัวเล่ม (Manuscript Modifications):</strong><br>
+          &bull; <code>journal/chapter2-literature-review.tex</code> (§2.2, p. 5, Lines 68–85: เสริมเหตุผลทางทฤษฎีเรื่อง Temporal Ordering)<br>
+          &bull; <code>journal/supplementary.tex</code> (Section S5: Robustness Checks, PROCESS Models 4, 7, 8 Comparison Matrix, Table S5)<br>
+          &bull; <code>journal/chapter5-discussion.tex</code> (§5.3, p. 16, Severity-Ranked Limitation #1: Cross-Sectional Endogeneity)
+        </div>
+      </div>
+
+      <!-- STRATEGY FOR MAJOR 3 -->
+      <div class="strategy-box">
+        <div class="strategy-header">
+          <div class="strategy-title">
+            <span class="pill pill-red" style="margin-right:0.5rem;">Major 3 Defense</span>
+            Defending Against Platform Selection Bias &amp; Digital Literate Hegemony
+          </div>
+          <span class="pill pill-green">5-Pillar Architecture</span>
+        </div>
+
+        <p><strong>แก่นของข้อวิพากษ์ (Core Vulnerability):</strong> Reviewer 2 ติงว่าผู้ใช้ Reddit และ Pantip เป็นตัวแทนของชนชั้นกลางในเมืองที่มีทักษะดิจิทัลสูง การสรุปผลว่าโมเดลนี้มีความคงที่ข้ามวัฒนธรรมสากล (<i>H</i><sub>4</sub>) จึงเป็นการสรุปเกินเลยจากข้อจำกัดของกลุ่มตัวอย่างบนแพลตฟอร์ม</p>
+
+        <ul class="pillar-list">
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 1: The Ecological Frontier Argument (การนิยามประชากรเป้าหมายอย่างแม่นยำ)</div>
+            <p>เราไม่ได้อ้างว่าพฤติกรรม <i>WEP</i> เกิดขึ้นในทุกกลุ่มประชากรอย่างไร้เงื่อนไข (เช่น คู่สามีภรรยาในชนบทที่ยังดำเนินชีวิตตามจารีตประเพณีดั้งเดิมและไม่เคยใช้แนวคิดหารค่าใช้จ่าย 50/50) แต่เรานิยามประชากรเป้าหมายไว้อย่างชัดเจนว่า: <strong>"ปรากฏการณ์ Weaponized Egalitarianism เกิดขึ้นเฉพาะในสังคมยุคเปลี่ยนผ่าน (Transitional Dyads) ที่ค่านิยมความสัมพันธ์แบบดั้งเดิมกำลังถูกแทนที่ด้วยสัญญาความเสมอภาคแบบสมัยใหม่"</strong> ดังนั้น กลุ่มผู้ใช้ Reddit และ Pantip จึงไม่ใช่กลุ่มตัวอย่างที่มีอคติ แต่คือ <strong>"แนวรบทางนิเวศน์วิทยาหลัก (The Primary Ecological Frontier)"</strong> ของปรากฏการณ์นี้โดยตรง</p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 2: Deep Cultural Divergence: Contractarian vs. Relational Collectivism (ความแตกต่างข้ามวัฒนธรรมที่ลึกซึ้ง)</div>
+            <p>แม้ทั้งสองกลุ่มจะเป็นผู้ใช้อินเทอร์เน็ต แต่ไวยากรณ์ทางวัฒนธรรมในการสื่อสารแตกต่างกันอย่างสิ้นเชิง:
+              <br>&bull; <strong>Western Reddit (Individualistic / Low-Context):</strong> เน้นสิทธิทางสัญญาปัจเจกนิยมอย่างตรงไปตรงมา ("ฉันจ่าย 50% ของค่าเช่า เธอจึงต้องทำงานบ้าน 50%")
+              <br>&bull; <strong>Thai Pantip (Collectivist / High-Context):</strong> เน้นความสัมพันธ์ ความเกรงใจ และภาระครอบครัวขยาย ("เราช่วยออกค่าใช้จ่ายครึ่งหนึ่งแล้ว ทำไมยังต้องคอยปรนนิบัติครอบครัวเธอฝ่ายเดียว")
+              <br>การที่โมเดล Moderated Mediation สามารถ Replicate ข้ามความแตกต่างทางวัฒนธรรมที่ลึกซึ้งขนาดนี้ได้ (&Delta;&beta; &le; 0.032, <i>p</i><sub>MGA</sub> &gt; 0.05) จึงเป็นหลักฐานที่ทรงพลังว่ากลไกทางจิตวิทยานี้ก้าวข้ามกรอบวัฒนธรรมได้อย่างแท้จริง
+            </p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 3: Rigorous MICOM Permutation Protocol (การพิสูจน์ความเท่าเทียมทางคณิตศาสตร์)</div>
+            <p>เราไม่ได้กล่าวอ้างความไม่แปรเปลี่ยนลอยๆ แต่ได้พิสูจน์ตามระเบียบวิธีวิจัยขั้นสูง <strong>Measurement Invariance of Composite Models (MICOM 3-Step)</strong> (Henseler et al., 2016; Hair et al., 2019):
+              <br>&bull; <strong>Step 1 (Configural Invariance):</strong> ตัวบ่งชี้และอัลกอริทึมเหมือนกันทั้งสองกลุ่ม
+              <br>&bull; <strong>Step 2 (Compositional Invariance):</strong> ทดสอบ Permutation Test 5,000 ครั้ง พบว่าค่า Original Correlation <i>c</i> สูงกว่าเกณฑ์ 0.998 และค่า <i>p</i> &gt; 0.05 ทุกตัวแปร ยืนยันว่าตัวแปรแฝงมีความหมายเชิงองค์ประกอบเหมือนกัน 100%
+              <br>&bull; <strong>Step 3 (Equality of Means &amp; Variances):</strong> ผ่านเกณฑ์การวิเคราะห์ Multi-Group Analysis
+            </p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 4: Demographic Heterogeneity &amp; Immense Statistical Power (<i>N</i> = 14,250)</div>
+            <p>ขนาดกลุ่มตัวอย่างรวม <i>N</i> = 14,250 (Reddit 10,000 + Pantip 4,250) ครอบคลุมความขัดแย้งตลอดช่วงเวลา 5 ปี มีความหลากหลายทางอายุ อาชีพ รายได้ และรูปแบบความสัมพันธ์ (คู่แต่งงาน, คู่หมั้น, คู่ที่อยู่ร่วมกันก่อนแต่งงาน) สูงกว่ากลุ่มตัวอย่างนิสิตนักศึกษา (Student convenience samples, <i>N</i> &approx; 200) ที่มักใช้ในวารสารจิตวิทยาแบบดั้งเดิมอย่างเทียบไม่ติด</p>
+          </li>
+
+          <li class="pillar-item">
+            <div class="pillar-title">Pillar 5: Explicit Generalizability Delimitation (การตีกรอบขอบเขตในบทความ)</div>
+            <p>เราได้เพิ่มประโยคตีกรอบขอบเขต (Boundary Framing) ในบทที่ 1, 4, และ 5 โดยระบุตรงไปตรงมาว่า <em>"Hypothesis 4 specifically establishes invariance across digitally mediated, urban transitional partnerships negotiating contractual equity, and should not be extrapolated to non-contractual agrarian subsistence unions without empirical replication."</em></p>
+          </li>
+        </ul>
+
+        <div class="alert alert-info" style="margin-bottom:0;">
+          <strong>ตำแหน่งการปรับแก้ในตัวเล่ม (Manuscript Modifications):</strong><br>
+          &bull; <code>journal/chapter1-introduction.tex</code> (§1.2, p. 3, Lines 45–58: Delineating the Transitional Dyadic Scope)<br>
+          &bull; <code>journal/chapter4-results.tex</code> (§4.3, p. 14, Lines 160–175: Comprehensive MICOM &amp; MGA Step 1–3 reporting)<br>
+          &bull; <code>journal/chapter5-discussion.tex</code> (§5.3, p. 16, Severity-Ranked Limitation #3: Platform Selection Boundaries)
+        </div>
+      </div>
+    </section>
+
     <!-- WORKFLOW 4: RESPONSE PROTOCOL -->
     <section id="workflow-4-response">
-      <h2>5. Point-by-Point Author Response &amp; Defensive Protocol</h2>
+      <h2>6. Point-by-Point Author Response &amp; Defensive Protocol Matrix</h2>
       <p>
         ตารางมาตรการตอบโต้และปรับแก้บทความ (Author Response Protocol) ตามหลักเกณฑ์ <strong>Thank &rarr; Answer Directly &rarr; Pinpoint Exact Manuscript Modification</strong>:
       </p>
@@ -663,41 +856,43 @@
               <td><strong>Ecological Validity &amp; Genre Conventions:</strong> การให้คะแนนภาษาในฟอรัมอาจสะท้อนเพียงลีลาการเล่าเรื่อง (Drama storytelling) ไม่ใช่พฤติกรรมจริงในชีวิตคู่</td>
               <td>
                 <strong>Rebuttal via Split-Source Triangulation:</strong><br>
-                กราบขอบพระคุณ Reviewer 2 สำหรับข้อสังเกตอันเฉียบคม เราได้ออกแบบโครงสร้างระเบียบวิธีวิจัยเพื่อแก้ปัญหานี้ตั้งแต่ต้นด้วย <strong>Split-Source Architecture</strong>:
-                1. ตัวแปรต้นและตัวแปรกลาง (<i>WEP</i>, <i>LRA</i>, <i>SSA</i>) ถูกวัดจากลีลาภาษาของผู้เล่าเรื่อง
-                2. แต่ตัวแปรตาม (<i>EIR</i>) ถูกผูกโยงเข้ากับ <strong>External Behavioral Indicators + Crowd Adjudicated Verdicts</strong> (เช่น อัตราส่วนการโหวต <code>YTA</code> จากผู้ร่วมสังเกตการณ์นับร้อยนับพันคน)
-                3. มีการพิสูจน์ด้วยค่าสหสัมพันธ์ว่า แม้ผู้เล่าจะพยายามใช้สำนวนแก้ต่าง แต่ชาวเน็ตสามารถจับสัญญาณการเอาเปรียบเชิงพฤติกรรมได้จริง (<i>r</i> = 0.612, <i>p</i> &lt; 0.001) ยืนยันว่าผลลัพธ์ไม่ได้ขึ้นอยู่กับเทคนิคการเล่าเรื่องเพียงลำพัง
+                กราบขอบพระคุณ Reviewer 2 สำหรับข้อสังเกตอันเฉียบคม เราได้ออกแบบโครงสร้างระเบียบวิธีวิจัยเพื่อแก้ปัญหานี้ตั้งแต่ต้นด้วย <strong>Split-Source Architecture</strong> (ดูรายละเอียด 5 เสาหลักในหัวข้อที่ 5):
+                <br>1. ตัวแปรต้นและตัวแปรกลาง (<i>WEP</i>, <i>LRA</i>, <i>SSA</i>) วัดจากภาษาของผู้เล่าเรื่อง
+                <br>2. ตัวแปรตาม (<i>EIR</i>) วัดจาก <strong>พฤติกรรมรูปธรรม + การตัดสินชี้ขาดของมวลชนภายนอก (Crowd-Adjudicated Verdicts)</strong>
+                <br>3. พิสูจน์ด้วยค่าสหสัมพันธ์ว่า ยิ่งอ้าง WEP สูง มวลชนยิ่งจับได้และลงโทษว่ามีความผิดจริง (<i>r</i> = 0.612, <i>p</i> &lt; 0.001) ไม่ได้ถูกหลอกด้วยสำนวนการเล่าเรื่อง
               </td>
               <td>
-                &bull; <code>chapter3-methodology.tex</code> (&sect;3.1, p. 8, Lines 15–35)<br>
-                &bull; <code>supplementary.tex</code> (Section S4: Qualitative Vignettes &amp; Crowd Consensus Validation)<br>
-                &bull; เพิ่มการอภิปรายขอบเขตใน <code>chapter5-discussion.tex</code> (&sect;5.3)
+                &bull; <code>chapter3-methodology.tex</code> (&sect;3.1, p. 8, Lines 18–42)<br>
+                &bull; <code>supplementary.tex</code> (Appendix S4: Qualitative Vignettes &amp; Crowd Triangulation)<br>
+                &bull; <code>chapter5-discussion.tex</code> (&sect;5.3, Limitation #2)
               </td>
             </tr>
             <tr>
               <td><span class="pill pill-red">Major 2</span></td>
               <td><strong>Endogeneity &amp; Omitted Relational History:</strong> ข้อมูลข้อความภาคตัดขวางไม่สามารถควบคุมประวัติศาสตร์ความสัมพันธ์ในอดีต หรือตัดประเด็น Reverse Causality ได้</td>
               <td>
-                <strong>Theoretical Grounding &amp; Boundary Acknowledgment:</strong><br>
-                1. <strong>Temporal Ordering Defense:</strong> ตามทฤษฎี Moral Licensing การสร้าง "เครดิตความชอบธรรม" (<i>WEP</i>) ต้องเกิดขึ้นก่อนหรือพร้อมกับการปฏิเสธความรับผิดชอบ (<i>SSA</i>) จึงจะเปิดทางให้เกิดการเอารัดเอาเปรียบได้โดยไม่รู้สึกผิด
-                2. <strong>Marker Variable &amp; Instrumental Variable Proxy:</strong> เราได้ทำการทดสอบ Full Collinearity VIF (<i>VIF</i> &le; 2.12) เพื่อยืนยันว่าไม่มี Common Method Bias
-                3. เรายอมรับข้อจำกัดนี้อย่างตรงไปตรงมาในฐานะข้อจำกัดอันดับ 1 ของงานภาคตัดขวาง และเสนอแนะให้ใช้ Dynamic Dyadic Longitudinal Diary Study ในอนาคต
+                <strong>Theoretical Grounding &amp; Model Comparisons:</strong><br>
+                1. <strong>Temporal Ordering Defense:</strong> ตามทฤษฎี Moral Licensing การสร้าง "เครดิตความชอบธรรม" (<i>WEP</i>) ต้องเกิดขึ้นก่อน จึงจะปลดล็อกการปัดความรับผิดชอบ (<i>SSA</i>) ได้โดยไม่เกิดความรู้สึกผิดในใจ
+                <br>2. <strong>Empirical Sensitivity:</strong> ทดสอบเปรียบเทียบ PROCESS Model 4 vs 7 vs 8 ยืนยันว่า Model 7 ให้ค่าความพอดีดีที่สุดอย่างมีนัยสำคัญ (&Delta;AIC = -1,579.6)
+                <br>3. ตรวจสอบ Full Collinearity VIFs (&le; 2.12) และยอมรับข้อจำกัดเรื่อง Cross-sectional causal inference อย่างโปร่งใส
               </td>
               <td>
-                &bull; <code>chapter2-literature-review.tex</code> (&sect;2.2, p. 5, Theoretical Sequence)<br>
-                &bull; <code>chapter5-discussion.tex</code> (&sect;5.3, p. 16, Severity-Ranked Limitation #1)<br>
-                &bull; <code>supplementary.tex</code> (Section S5: PROCESS Model 4 vs 7 vs 8 Sensitivity Comparisons, &Delta;AIC = -1,579.6)
+                &bull; <code>chapter2-literature-review.tex</code> (&sect;2.2, p. 5, Lines 68–85)<br>
+                &bull; <code>chapter5-discussion.tex</code> (&sect;5.3, p. 16, Limitation #1)<br>
+                &bull; <code>supplementary.tex</code> (Section S5: Table S5, Models 4/7/8 Comparisons)
               </td>
             </tr>
             <tr>
               <td><span class="pill pill-red">Major 3</span></td>
               <td><strong>Platform Selection Bias:</strong> ผู้ใช้ Reddit/Pantip เป็นชนชั้นกลางในเมือง ไม่เป็นตัวแทนของประชากรทั้งประเทศ การอ้างความคงที่ข้ามวัฒนธรรมจึงจำกัด</td>
               <td>
-                <strong>Nuanced Generalizability Framing:</strong><br>
-                เราน้อมรับและได้ปรับแก้สำนวนการอ้างอิงให้มีความรัดกุมยิ่งขึ้น โดยระบุชัดเจนว่า <strong><i>H</i><sub>4</sub> (Cross-Cultural Invariance)</strong> ในงานนี้ หมายถึง <em>"ความคงที่ของกลไกทางจิตวิทยาในการอ้างความชอบธรรมข้ามกลุ่มผู้ใช้แพลตฟอร์มดิจิทัลในสังคมปัจเจกนิยม (Western) และสังคมคติรวมหมู่ (Thai)"</em> ไม่ได้หมายถึงการเหมารวมถึงประชากรชนบทที่ไม่ได้ใช้ชีวิตคู่แบบหารค่าใช้จ่าย 50/50
+                <strong>Nuanced Generalizability &amp; MICOM Invariance:</strong><br>
+                1. <strong>Ecological Frontier:</strong> ปรากฏการณ์นี้เกิดขึ้นเฉพาะในกลุ่มคู่รักยุคเปลี่ยนผ่านที่เจรจาเรื่อง 50/50 ซึ่งผู้ใช้เว็บบอร์ดคือกลุ่มประชากรเป้าหมายโดยตรง
+                <br>2. <strong>Deep Cultural Contrast:</strong> ตรวจพบ Invariance ข้ามภาษาและวัฒนธรรมที่มีไวยากรณ์ต่างกันสิ้นเชิง (Individualistic vs. Collectivist)
+                <br>3. <strong>MICOM Permutation Test:</strong> พิสูจน์ความเท่าเทียมทางคณิตศาสตร์อย่างสมบูรณ์ (Step 1–3, <i>c</i> &ge; 0.998, <i>p</i> &gt; 0.05) บนกลุ่มตัวอย่างมหาศาล <i>N</i> = 14,250
               </td>
               <td>
-                &bull; <code>chapter1-introduction.tex</code> (&sect;1.2, p. 3, Boundary Scope)<br>
+                &bull; <code>chapter1-introduction.tex</code> (&sect;1.2, p. 3, Lines 45–58)<br>
                 &bull; <code>chapter4-results.tex</code> (&sect;4.3, p. 14, Table 5 MGA Interpretation)<br>
                 &bull; <code>chapter5-discussion.tex</code> (&sect;5.3, Limitation #3)
               </td>
@@ -739,7 +934,7 @@
 
     <!-- WORKFLOW 5: AI ETHICS & IRB -->
     <section id="workflow-5">
-      <h2>6. Workflow 5: Ethical AI Disclosure &amp; IRB Compliance Audit</h2>
+      <h2>7. Workflow 5: Ethical AI Disclosure &amp; IRB Compliance Audit</h2>
 
       <div class="card card-defense">
         <h4>ICMJE / COPE Standard Disclosure Statement</h4>
@@ -748,7 +943,7 @@
         </p>
       </div>
 
-      <h3>6.1 การปฏิบัติตามมาตรฐานจริยธรรมการวิจัยในมนุษย์ (IRB Protocol Alignment)</h3>
+      <h3>7.1 การปฏิบัติตามมาตรฐานจริยธรรมการวิจัยในมนุษย์ (IRB Protocol Alignment)</h3>
       <div class="table-container">
         <table>
           <thead>
